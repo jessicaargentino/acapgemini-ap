@@ -33,30 +33,34 @@ public class Banco {
         byte numero = Byte.parseByte(entrada.nextLine());
         return numero;
     }
+    
+    static void imprimeMensagem(String mensagem) {
+        System.out.println("\n" + mensagem);
+    }
 
     static void executaOpcao(int opcao) {
         switch (opcao) {
             case 1:
-                System.out.println("\nOlá, você entrou no ambiente de crédito pessoal!");
+                imprimeMensagem("Olá, você entrou no ambiente de crédito pessoal!");
                 break;
             case 2:
-                System.out.println("\nOlá, você entrou no ambiente de crédito imobiliário!");
+                imprimeMensagem("Olá, você entrou no ambiente de crédito imobiliário!");
                 break;
             case 3:
-                System.out.println("\nOlá, você entrou no ambiente de crédito empresarial!");
+                imprimeMensagem("Olá, você entrou no ambiente de crédito empresarial!");
                 break;
             case 4:
-                System.out.println("\nOlá, você entrou no ambiente de empréstimo consignado!");
+                imprimeMensagem("Olá, você entrou no ambiente de empréstimo consignado!");
                 break;
             default:
-                System.out.println("\nOpção inválida!");
+                imprimeMensagem("Opção inválida!");
                 break;
         }
     }
 
     static char retornaMenu() {
         char continuar;
-        
+
         do {
             System.out.println("\nDeseja voltar ao menu principal?");
             System.out.println("V - Voltar");
@@ -78,7 +82,7 @@ public class Banco {
             if (continuar == 'V' || continuar == 'v') {
                 voltar = true;
             } else if (continuar == 'S' || continuar == 's') {
-                System.out.println("\nObrigada por escolher a Bradesco Financiamentos!");
+                imprimeMensagem("Obrigada por escolher a Bradesco Financiamentos!");
                 voltar = false;
             }
         } else {
@@ -87,4 +91,5 @@ public class Banco {
 
         return voltar;
     }
+
 }
