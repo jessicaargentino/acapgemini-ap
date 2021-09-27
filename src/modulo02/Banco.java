@@ -55,8 +55,8 @@ public class Banco {
     }
 
     static char retornaMenu() {
-        char continuar = 'S';
-
+        char continuar;
+        
         do {
             System.out.println("\nDeseja voltar ao menu principal?");
             System.out.println("V - Voltar");
