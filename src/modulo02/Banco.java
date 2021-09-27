@@ -51,13 +51,7 @@ public class Banco {
                 validaOpcao(opcao);
                 break;
             default:
-                do {
-                    System.out.println("\nOpção inválida!");
-                    cabecalho();
-                    menu();
-                    opcao = lerNumero("Escolha uma opção: ");
-                    executaOpcao(opcao);
-                } while (opcao < 0 && opcao > 4);
+                validaDefault(opcao);
                 break;
         }
     }
@@ -83,5 +77,15 @@ public class Banco {
                 }
             } while (continua != 'V' && continua != 'v' && continua != 'S' && continua != 's');
         }
+    }
+
+    static void validaDefault(int opcao) {
+        do {
+            System.out.println("\nOpção inválida!");
+            cabecalho();
+            menu();
+            opcao = lerNumero("Escolha uma opção: ");
+            executaOpcao(opcao);
+        } while (opcao < 0 && opcao > 4);
     }
 }
