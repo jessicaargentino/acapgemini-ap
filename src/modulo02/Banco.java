@@ -9,10 +9,12 @@ public class Banco {
     public static void main(String[] args) {
         byte opcao;
 
-        cabecalho();
-        menu();
-        opcao = lerNumero("Escolha uma opção: ");
-        executaOpcao(opcao);
+        do {
+            cabecalho();
+            menu();
+            opcao = lerNumero("Escolha uma opção: ");
+            executaOpcao(opcao);
+        } while (validaOpcao(opcao));
     }
 
     static void cabecalho() {
@@ -36,56 +38,53 @@ public class Banco {
         switch (opcao) {
             case 1:
                 System.out.println("\nOlá, você entrou no ambiente de crédito pessoal!");
-                validaOpcao(opcao);
                 break;
             case 2:
                 System.out.println("\nOlá, você entrou no ambiente de crédito imobiliário!");
-                validaOpcao(opcao);
                 break;
             case 3:
                 System.out.println("\nOlá, você entrou no ambiente de crédito empresarial!");
-                validaOpcao(opcao);
                 break;
             case 4:
                 System.out.println("\nOlá, você entrou no ambiente de empréstimo consignado!");
-                validaOpcao(opcao);
                 break;
             default:
-                validaDefault(opcao);
+                System.out.println("\nOpção inválida!");
                 break;
         }
     }
 
-    static void validaOpcao(int opcao) {
-        char continua = 'S';
+    static char retornaMenu() {
+        char continuar = 'S';
 
-        if (opcao > 0 && opcao <= 4) {
-            do {
-                System.out.println("\nDeseja voltar ao menu principal?");
-                System.out.println("V - Voltar");
-                System.out.println("S - Sair");
-                System.out.print("Sua opção: ");
-                continua = entrada.nextLine().toUpperCase().charAt(0);
+        do {
+            System.out.println("\nDeseja voltar ao menu principal?");
+            System.out.println("V - Voltar");
+            System.out.println("S - Sair");
+            System.out.print("Sua opção: ");
+            continuar = entrada.nextLine().toUpperCase().charAt(0);
+        } while (continuar != 'V' && continuar != 'v' && continuar != 'S' && continuar != 's');
 
-                if (continua == 'V' || continua == 'v') {
-                    cabecalho();
-                    menu();
-                    opcao = lerNumero("Escolha uma opção: ");
-                    executaOpcao(opcao);
-                } else if (continua == 'S' || continua == 's') {
-                    System.out.println("\nObrigada por escolher a Bradesco Financiamentos!");
-                }
-            } while (continua != 'V' && continua != 'v' && continua != 'S' && continua != 's');
-        }
+        return continuar;
     }
 
-    static void validaDefault(int opcao) {
-        do {
-            System.out.println("\nOpção inválida!");
-            cabecalho();
-            menu();
-            opcao = lerNumero("Escolha uma opção: ");
-            executaOpcao(opcao);
-        } while (opcao < 0 && opcao > 4);
+    static boolean validaOpcao(int opcao) {
+        boolean voltar = true;
+        char continuar;
+
+        if (opcao > 0 && opcao <= 4) {
+            continuar = retornaMenu();
+
+            if (continuar == 'V' || continuar == 'v') {
+                voltar = true;
+            } else if (continuar == 'S' || continuar == 's') {
+                System.out.println("\nObrigada por escolher a Bradesco Financiamentos!");
+                voltar = false;
+            }
+        } else {
+            voltar = true;
+        }
+
+        return voltar;
     }
 }
