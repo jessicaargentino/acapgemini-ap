@@ -65,7 +65,7 @@ public class Banco {
     static void validaOpcao(int opcao) {
         char continua = 'S';
 
-        if (opcao > 0 && opcao < 4) {
+        if (opcao > 0 && opcao <= 4) {
             do {
                 System.out.println("\nDeseja voltar ao menu principal?");
                 System.out.println("V - Voltar");
