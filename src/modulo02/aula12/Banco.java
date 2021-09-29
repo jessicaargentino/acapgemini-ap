@@ -1,4 +1,4 @@
-package modulo02;
+package modulo02.aula12;
 
 import java.util.Scanner;
 
