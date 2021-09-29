@@ -33,27 +33,23 @@ public class Banco {
         byte numero = Byte.parseByte(entrada.nextLine());
         return numero;
     }
-    
-    static void imprimeMensagem(String mensagem) {
-        System.out.println("\n" + mensagem);
-    }
 
     static void executaOpcao(int opcao) {
         switch (opcao) {
             case 1:
-                imprimeMensagem("Olá, você entrou no ambiente de crédito pessoal!");
+                System.out.println("\nOlá, você entrou no ambiente de crédito pessoal!");
                 break;
             case 2:
-                imprimeMensagem("Olá, você entrou no ambiente de crédito imobiliário!");
+                System.out.println("\nOlá, você entrou no ambiente de crédito imobiliário!");
                 break;
             case 3:
-                imprimeMensagem("Olá, você entrou no ambiente de crédito empresarial!");
+                System.out.println("\nOlá, você entrou no ambiente de crédito empresarial!");
                 break;
             case 4:
-                imprimeMensagem("Olá, você entrou no ambiente de empréstimo consignado!");
+                System.out.println("\nOlá, você entrou no ambiente de empréstimo consignado!");
                 break;
             default:
-                imprimeMensagem("Opção inválida!");
+                System.out.println("\nOpção inválida!");
                 break;
         }
     }
@@ -82,7 +78,7 @@ public class Banco {
             if (continuar == 'V' || continuar == 'v') {
                 voltar = true;
             } else if (continuar == 'S' || continuar == 's') {
-                imprimeMensagem("Obrigada por escolher a Bradesco Financiamentos!");
+                System.out.println("\nObrigada por escolher a Bradesco Financiamentos!");
                 voltar = false;
             }
         } else {
