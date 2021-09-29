@@ -2,9 +2,9 @@ package modulo02.aula14;
 
 public class Pessoa {
     // DEFINIÇÃO DOS ATRIBUTOS DA CLASSE
-    String nome;
-    String sobrenome;
-    int idade;
+    private String nome;
+    private String sobrenome;
+    private int idade;
 
     public static void main(String[] args) {
         // CRIAÇÃO DE DOIS OBJETOS ATRAVÉS DA INSTÂNCIA DA CLASSE PESSOA
@@ -20,11 +20,22 @@ public class Pessoa {
         pessoa2.sobrenome = "Skywalker";
         pessoa2.idade = 53;
 
-        // IMPRESSÃO DOS VALORES PASSADOS PARA OS ATRIBUTOS
+        // CHAMADA DO MÉTODO DE IMPRESSÃO DO CABEÇALHO
+        pessoa1.imprimeCabecalho();
+
+        // CHAMADA DO MÉTODO DE IMPRESSÃO DOS VALORES PASSADOS PARA OS ATRIBUTOS
+        pessoa1.imprimePessoas();
+        pessoa2.imprimePessoas();
+    }
+
+    // MÉTODO QUE IMPRIME O CABEÇALHO/MENSAGEM INFORMATIVA
+    public void imprimeCabecalho() {
         System.out.println("****** PESSOAS ******");
-        System.out.printf("Nome: %s %s\n", pessoa1.nome, pessoa1.sobrenome);
-        System.out.printf("Idade: %d\n", pessoa1.idade);
-        System.out.printf("Nome: %s %s\n", pessoa2.nome, pessoa2.sobrenome);
-        System.out.printf("Idade: %d\n", pessoa2.idade);
+    }
+
+    // MÉTODO QUE IMPRIME OS VALORES ATRIBUÍDOS AO OBJETO PESSOA
+    public void imprimePessoas() {
+        System.out.printf("Nome: %s %s\n", nome, sobrenome);
+        System.out.printf("Idade: %d\n", idade);
     }
 }
