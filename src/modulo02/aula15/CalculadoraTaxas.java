@@ -20,4 +20,9 @@ public class CalculadoraTaxas {
             return false;
         }
     }
+
+    // MÉTODO QUE RETORNA O VALOR DA TAXA DE SAQUE
+    public double getTaxaSaque() {
+        return taxaSaque = 1.30;
+    }
 }
