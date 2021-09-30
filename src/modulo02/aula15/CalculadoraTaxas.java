@@ -4,6 +4,7 @@ public class CalculadoraTaxas {
     // DEFINIÇÃO DOS ATRIBUTOS DA CLASSE
     private double taxaTransferencia;
     private double taxaSaque;
+    private int quantidadeSaque;
 
     // MÉTODO QUE RECEBE O VALOR A SER TRANSFERIDO E RETORNA O VALOR COM A TAXA DE
     // 0.001% EMBUTIDO
@@ -16,15 +17,14 @@ public class CalculadoraTaxas {
         return valor;
     }
 
-    // MÉTODO QUE CALCULA A TAXA DE SAQUE, RECEBE A QUANTIDADE DE SAQUES REALIZADOS,
-    // VERIFICA SE É DIVISÍVEL POR 5, SE FOR, ACRESCENTA 1 NO CONTADOR E RETORNA A
-    // TAXA BASEADA NOS GRUPOS DE 5 SAQUES QUE FORAM REALIZADOS
-    public double calculaTaxaSaque(int quantidade) {
-        int contador = 0;
+    // MÉTODO QUE RECEBE UM VALOR POR PARÂMETRO, INCREMENTA O ATRIBUTO
+    // QUANTIDADESAQUE E VERIFICA SE O MESMO É DIVISÍVEL POR 5. SE FOR,
+    // RETORNA A TAXA DE 1,30 A SER PAGA PELO SAQUE, SE NÃO, RETORNA 0.0 PARA A TAXA
+    public double calculaTaxaSaque(double valor) {
+        quantidadeSaque++;
 
-        if (quantidade % 5 == 0) {
-            contador++;
-            taxaSaque = (contador * 1.30);
+        if (quantidadeSaque % 5 == 0) {
+            taxaSaque = 1.30;
         } else {
             taxaSaque = 0.0;
         }

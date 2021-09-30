@@ -31,53 +31,47 @@ public class MainCalculadora {
         // PASSANDO O VALOR COMO PARÂMETRO, ACUMULA A QUANTIDADE DE SAQUES FEITOS NA
         // VARIÁVEL CONTADOR, CHAMA O MÉTODO DE CALCULAR TAXA PASSANDO O
         // CONTADOR COMO PARÂMETRO, IMPRIME A QUANTIDADE DE SAQUES REALIZADOS E O VALOR
-        // DA
-        // TAXA
-        valor = 60.00;
-        calculadora.simulaSaque(valor);
-        contador++;
+        // DA TAXA
 
-        calculadora.calculaTaxaSaque(contador);
+        valor = 60.00;
+        calculadora.calculaTaxaSaque(valor);
+        contador++;
+        System.out.printf("\nValor a ser sacado: R$%.2f", valor);
         System.out.printf("\nQuantidade de saques realizados: %d", contador);
         calculadora.imprimeTaxaSaque();
 
         valor = 160.00;
-        calculadora.simulaSaque(valor);
+        calculadora.calculaTaxaSaque(valor);
         contador++;
-
-        calculadora.calculaTaxaSaque(contador);
+        System.out.printf("\nValor a ser sacado: R$%.2f", valor);
         System.out.printf("\nQuantidade de saques realizados: %d", contador);
         calculadora.imprimeTaxaSaque();
 
         valor = 92.00;
-        calculadora.simulaSaque(valor);
+        calculadora.calculaTaxaSaque(valor);
         contador++;
-
-        calculadora.calculaTaxaSaque(contador);
+        System.out.printf("\nValor a ser sacado: R$%.2f", valor);
         System.out.printf("\nQuantidade de saques realizados: %d", contador);
         calculadora.imprimeTaxaSaque();
 
         valor = 45.00;
-        calculadora.simulaSaque(valor);
+        calculadora.calculaTaxaSaque(valor);
         contador++;
-
-        calculadora.calculaTaxaSaque(contador);
+        System.out.printf("\nValor a ser sacado: R$%.2f", valor);
         System.out.printf("\nQuantidade de saques realizados: %d", contador);
         calculadora.imprimeTaxaSaque();
 
         valor = 20.00;
-        calculadora.simulaSaque(valor);
+        calculadora.calculaTaxaSaque(valor);
         contador++;
-
-        calculadora.calculaTaxaSaque(contador);
+        System.out.printf("\nValor a ser sacado: R$%.2f", valor);
         System.out.printf("\nQuantidade de saques realizados: %d", contador);
         calculadora.imprimeTaxaSaque();
 
         valor = 78.00;
-        calculadora.simulaSaque(valor);
+        calculadora.calculaTaxaSaque(valor);
         contador++;
-
-        calculadora.calculaTaxaSaque(contador);
+        System.out.printf("\nValor a ser sacado: R$%.2f", valor);
         System.out.printf("\nQuantidade de saques realizados: %d", contador);
         calculadora.imprimeTaxaSaque();
     }
