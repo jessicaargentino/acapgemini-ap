@@ -20,11 +20,16 @@ public class CalculadoraTaxas {
     // VERIFICA SE É DIVISÍVEL POR 5, SE FOR, ACRESCENTA 1 NO CONTADOR E DÁ E
     // RETORNA A TAXA BASEADA NOS GRUPOS DE 5 SAQUES QUE FORAM REALIZADOS
     public double calculaTaxaSaque(int quantidade) {
+        int contador = 0;
+
         if (quantidade % 5 == 0) {
-            return taxaSaque = ((quantidade / 5) * 1.30);
-        }else{
-            return 0.0;
+            contador++;
+            taxaSaque = (contador * 1.30);
+        } else {
+            taxaSaque = 0.0;
         }
+
+        return taxaSaque;
     }
 
     // MÉTODO QUE IMPRIME O VALOR DA TAXA DE TRANSFERÊNCIA
