@@ -23,7 +23,7 @@ public class CalculoImposto {
     }
 
     /*
-     * MÉTODO QUE RECEBE UM VALOR POR PARÂMETRO E CALCULA O IMPOSTO IR OBRE O
+     * MÉTODO QUE RECEBE UM VALOR POR PARÂMETRO E CALCULA O IMPOSTO IR SOBRE O
      * MESMO
      */
     public double calculaIR(double valor) {
