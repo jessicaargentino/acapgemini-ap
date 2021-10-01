@@ -14,7 +14,6 @@ public class Main {
         double ir = imposto.calculaIR(34.90);
 
         /* IMPRESSÃO DOS IMPOSTOS */
-        System.out.println("***** IMPOSTOS CALCULADOS *****");
         System.out.printf("ISS: R$%.2f\nIOF: R$%.2f\nIR: R$%.2f", iss, iof, ir);
     }
 
