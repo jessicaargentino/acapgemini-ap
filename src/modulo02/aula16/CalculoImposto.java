@@ -2,7 +2,7 @@ package modulo02.aula16;
 
 public class CalculoImposto {
     /* DEFINIÇÃO DOS ATRIBUTOS DA CLASSE */
-    private double iss = 0.079; // 7.9%
+    private double iss = 0.078; // 7.8%
     private double iof = 0.034; // 3.4%
     private double ir = 0.225; // 22.5%;
 
@@ -23,8 +23,7 @@ public class CalculoImposto {
     }
 
     /*
-     * MÉTODO QUE RECEBE UM VALOR POR PARÂMETRO E CALCULA O IMPOSTO IR SOBRE O
-     * MESMO
+     * MÉTODO QUE RECEBE UM VALOR POR PARÂMETRO E CALCULA O IMPOSTO IR SOBRE O MESMO
      */
     public double calculaIR(double valor) {
         return (valor * ir);
