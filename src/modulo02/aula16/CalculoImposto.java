@@ -21,4 +21,12 @@ public class CalculoImposto {
     public double calculaIOF(double valor) {
         return (valor * iof);
     }
+
+    /*
+     * MÉTODO QUE RECEBE UM VALOR POR PARÂMETRO E CALCULA O IMPOSTO IR OBRE O
+     * MESMO
+     */
+    public double calculaIR(double valor) {
+        return (valor * ir);
+    }
 }
