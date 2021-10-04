@@ -47,6 +47,13 @@ public class CadastroPessoa {
         pessoa5.setIdade(24);
         pessoa5.setRg("44.444.444");
         pessoa5.setCpf("444.444.444-44");
+
+        /* ATRIBUINDO CADA PESSOA A UMA POSIÇÃO DO VETOR DE PESSOAS */
+        pessoa[0] = pessoa1;
+        pessoa[1] = pessoa2;
+        pessoa[2] = pessoa3;
+        pessoa[3] = pessoa4;
+        pessoa[4] = pessoa5;
     }
 
 }
