@@ -21,6 +21,7 @@ public class TelaPrincipalLoja {
         double valor = produto.getValor();
 
         /* IMPRESSÃO DOS VALORES */
+        System.out.println("***** PRODUTOS *****");
         System.out.printf("Código produto: %d\n", codigo);
         System.out.printf("Nome: %s\n", nome);
         System.out.printf("Descrição: %s\n", descricao);

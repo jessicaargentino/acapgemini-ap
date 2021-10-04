@@ -21,6 +21,7 @@ public class TelaPrincipalBanco {
         double saldo = conta.getSaldo();
 
         /* IMPRESSÃO DOS VALORES */
+        System.out.println("***** CONTA CORRENTE *****");
         System.out.printf("Agência: %d\n", agencia);
         System.out.printf("Número: %d\n", numero);
         System.out.printf("Código cliente: %d\n", codigoCliente);
