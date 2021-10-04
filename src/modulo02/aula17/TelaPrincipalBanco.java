@@ -11,5 +11,14 @@ public class TelaPrincipalBanco {
         conta.setCodigoCliente(9876);
         conta.setSaldo(6500.00);
 
+        /*
+         * ACESSO DOS VALORES UTILIZANDO OS GETTERS E ARMAZENAMENTO DOS MESMOS NAS
+         * VARIÁVEIS
+         */
+        int agencia = conta.getAgencia();
+        int numero = conta.getNumero();
+        int codigoCliente = conta.getCodigoCliente();
+        double saldo = conta.getSaldo();
+
     }
 }
