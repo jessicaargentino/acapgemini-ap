@@ -10,7 +10,6 @@ public class PessoaFisica {
     private String cpf;
 
     /* GETTERS E SETTERS */
-
     public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
