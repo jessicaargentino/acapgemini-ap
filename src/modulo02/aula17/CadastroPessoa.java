@@ -60,6 +60,7 @@ public class CadastroPessoa {
 
         /* IMPRESSÃO DO VETOR DE PESSOAS UTILIZANDO O FOREACH */
         for (PessoaFisica pessoaFisica : pessoa) {
+            System.out.printf("Código: %d\n", pessoaFisica.getCodigo());
             System.out.printf("Nome: %s %s\n", pessoaFisica.getNome(), pessoaFisica.getSobrenome());
             System.out.printf("Idade: %d anos\n", pessoaFisica.getIdade());
             System.out.printf("RG: %s | CPF: %s\n\n", pessoaFisica.getRg(), pessoaFisica.getCpf());
