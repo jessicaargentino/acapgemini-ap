@@ -56,7 +56,14 @@ public class CadastroPessoa {
         pessoa[4] = pessoa5;
 
         /* IMPRESSÃO DO CABEÇALHO */
-        System.out.println("***** PESSOAS FÍSICAS *****");
+        System.out.println("***** PESSOAS FÍSICAS *****\n");
+
+        /* IMPRESSÃO DO VETOR DE PESSOAS UTILIZANDO O FOREACH */
+        for (PessoaFisica pessoaFisica : pessoa) {
+            System.out.printf("Nome: %s %s\n", pessoaFisica.getNome(), pessoaFisica.getSobrenome());
+            System.out.printf("Idade: %d anos\n", pessoaFisica.getIdade());
+            System.out.printf("RG: %s | CPF: %s\n\n", pessoaFisica.getRg(), pessoaFisica.getCpf());
+        }
     }
 
 }
