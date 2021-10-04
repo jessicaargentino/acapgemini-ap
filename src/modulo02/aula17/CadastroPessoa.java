@@ -54,6 +54,9 @@ public class CadastroPessoa {
         pessoa[2] = pessoa3;
         pessoa[3] = pessoa4;
         pessoa[4] = pessoa5;
+
+        /* IMPRESSÃO DO CABEÇALHO */
+        System.out.println("***** PESSOAS FÍSICAS *****");
     }
 
 }
