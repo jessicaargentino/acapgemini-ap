@@ -17,5 +17,7 @@ public class Numero {
         numero[8] = 0;
         numero[9] = 12;
 
+        /* IMPRESSÃO DO CABEÇALHO */
+        System.out.println("***** NÚMEROS *****");
     }
 }
