@@ -19,5 +19,10 @@ public class Numero {
 
         /* IMPRESSÃO DO CABEÇALHO */
         System.out.println("***** NÚMEROS *****");
+
+        /* PERCORRENDO O ARRAY E IMPRIMINDO OS DADOS DAS POSIÇÕES */
+        for (int i = 0; i < numero.length; i++) {
+            System.out.printf("%d ", numero[i]);
+        }
     }
 }
