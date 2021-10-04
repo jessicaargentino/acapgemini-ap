@@ -11,5 +11,11 @@ public class TelaPrincipalLoja {
         produto.setDescricao("Instrumento musical");
         produto.setValor(80.00);
     
+        /* ACESSO DOS VALORES UTILIZANDO OS GETTERS E ARMAZENAMENTO DOS MESMOS NAS VARIÁVEIS */
+        int codigo = produto.getCodigo();
+        String nome = produto.getNome();
+        String descricao = produto.getDescricao();
+        double valor = produto.getValor();
+
     }
 }
