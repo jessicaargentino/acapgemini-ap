@@ -20,5 +20,11 @@ public class TelaPrincipalBanco {
         int codigoCliente = conta.getCodigoCliente();
         double saldo = conta.getSaldo();
 
+        /* IMPRESSÃO DOS VALORES */
+        System.out.printf("Agência: %d\n", agencia);
+        System.out.printf("Número: %d\n", numero);
+        System.out.printf("Código cliente: %d\n", codigoCliente);
+        System.out.printf("Saldo: R$%.2f\n", saldo);
+
     }
 }
