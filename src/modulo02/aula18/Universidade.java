@@ -20,14 +20,18 @@ public class Universidade {
         /* ATRIBUIÇÃO DE VALORES PARA COORDENADOR UTILIZANDO SETTER */
         coordenador.setNome("Pure");
         coordenador.setSobrenome("Vessel");
+        coordenador.setMatricula(980862);
         coordenador.setCursoCoordenado("Sistemas de Informação");
         coordenador.setBonus("Aulas extras em Jogos Digitais");
         coordenador.setSalario(3500.00);
         coordenador.setDepartamento("Instituto de TI");
 
         /* ATRIBUIÇÃO DE VALORES PARA FUNCIONARIO UTILIZANDO SETTER */
-        funcionario.setSalario(3500.00);
-        funcionario.setDepartamento("Instituto de TI");
+        funcionario.setNome("Luke");
+        funcionario.setSobrenome("Skywalker");
+        funcionario.setMatricula(182276);
+        funcionario.setSalario(5000.00);
+        funcionario.setDepartamento("Instituto da Força");
 
         /* IMPRESSÃO DO CABEÇALHO */
         System.out.println("***** CAPVERSIDADE *****");
