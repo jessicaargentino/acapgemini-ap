@@ -11,8 +11,11 @@ public class Universidade {
         Funcionario funcionario = new Funcionario();
 
         /* ATRIBUIÇÃO DE VALORES PARA ALUNO UTILIZANDO SETTER */
+        aluno.setNome("Laura");
+        aluno.setSobrenome("Palmer");
         aluno.setCurso("Sistemas de Informação");
         aluno.setMatricula(129807);
+        aluno.setTurma("Turma D");
 
         /* ATRIBUIÇÃO DE VALORES PARA COORDENADOR UTILIZANDO SETTER */
         coordenador.setCursoCoordenado("Sistemas de Informação");
