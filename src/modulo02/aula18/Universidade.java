@@ -48,6 +48,12 @@ public class Universidade {
         System.out.printf("Departamento e salário: %s - R$%.2f\n", coordenador.getDepartamento(),
                 coordenador.getSalario());
         System.out.printf("Bônus: %s\n", coordenador.getBonus());
+
+        /* IMPRESSÃO FUNCIONARIO */
+        System.out.printf("\nNome: %s %s\n", funcionario.getNome(), funcionario.getSobrenome());
+        System.out.printf("Matrícula e departamento: %s - %s\n", funcionario.getMatricula(),
+                funcionario.getDepartamento());
+        System.out.printf("Salário: R$%.2f", funcionario.getSalario());
     }
 
 }
