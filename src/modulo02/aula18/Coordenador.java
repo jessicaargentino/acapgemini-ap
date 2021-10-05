@@ -4,7 +4,7 @@ package modulo02.aula18;
 public class Coordenador extends Funcionario {
     /* DEFINIÇÃO DOS ATRIBUTOS */
     private String cursoCoordenado;
-    private double bonus;
+    private int bonus;
 
     /* GETTERS E SETTERS */
     public void setCursoCoordenado(String cursoCoordenado) {
@@ -15,11 +15,11 @@ public class Coordenador extends Funcionario {
         return cursoCoordenado;
     }
 
-    public void setBonus(double bonus) {
+    public void setBonus(int bonus) {
         this.bonus = bonus;
     }
 
-    public double getBonus() {
+    public int getBonus() {
         return bonus;
     }
 }
