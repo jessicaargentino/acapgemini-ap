@@ -34,7 +34,12 @@ public class Universidade {
         funcionario.setDepartamento("Instituto da Força");
 
         /* IMPRESSÃO DO CABEÇALHO */
-        System.out.println("***** CAPVERSIDADE *****");
+        System.out.println("***** CAPVERSIDADE *****\n");
+
+        /* IMPRESSÃO ALUNO */
+        System.out.printf("Nome: %s %s\n", aluno.getNome(), aluno.getSobrenome());
+        System.out.printf("Matrícula, curso e turma: %d - %s - %s\n", aluno.getMatricula(), aluno.getCurso(),
+                aluno.getTurma());
     }
 
 }
