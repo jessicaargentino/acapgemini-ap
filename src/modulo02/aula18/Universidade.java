@@ -40,6 +40,14 @@ public class Universidade {
         System.out.printf("Nome: %s %s\n", aluno.getNome(), aluno.getSobrenome());
         System.out.printf("Matrícula, curso e turma: %d - %s - %s\n", aluno.getMatricula(), aluno.getCurso(),
                 aluno.getTurma());
+
+        /* IMPRESSÃO COORDENADOR */
+        System.out.printf("\nNome: %s %s\n", coordenador.getNome(), coordenador.getSobrenome());
+        System.out.printf("Matrícula e curso coordenado: %s - %s\n", coordenador.getMatricula(),
+                coordenador.getCursoCoordenado());
+        System.out.printf("Departamento e salário: %s - R$%.2f\n", coordenador.getDepartamento(),
+                coordenador.getSalario());
+        System.out.printf("Bônus: %s\n", coordenador.getBonus());
     }
 
 }
