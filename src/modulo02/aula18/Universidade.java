@@ -13,6 +13,10 @@ public class Universidade {
         /* ATRIBUIÇÃO DE VALORES PARA ALUNO UTILIZANDO SETTER */
         aluno.setCurso("Sistemas de Informação");
         aluno.setMatricula(129807);
+
+        /* ATRIBUIÇÃO DE VALORES PARA COORDENADOR UTILIZANDO SETTER */
+        coordenador.setCursoCoordenado("Sistemas de Informação");
+        coordenador.setBonus("Aulas extras em Jogos Digitais");
     }
 
 }
