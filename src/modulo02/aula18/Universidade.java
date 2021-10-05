@@ -9,6 +9,10 @@ public class Universidade {
         Aluno aluno = new Aluno();
         Coordenador coordenador = new Coordenador();
         Funcionario funcionario = new Funcionario();
+
+        /* ATRIBUIÇÃO DE VALORES PARA ALUNO UTILIZANDO SETTER */
+        aluno.setCurso("Sistemas de Informação");
+        aluno.setMatricula(129807);
     }
 
 }
