@@ -21,6 +21,9 @@ public class Universidade {
         /* ATRIBUIÇÃO DE VALORES PARA FUNCIONARIO UTILIZANDO SETTER */
         funcionario.setSalario(3500.00);
         funcionario.setDepartamento("Instituto de TI");
+
+        /* IMPRESSÃO DO CABEÇALHO */
+        System.out.println("***** CAPVERSIDADE *****");
     }
 
 }
