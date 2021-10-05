@@ -22,7 +22,7 @@ public class Universidade {
         coordenador.setSobrenome("Vessel");
         coordenador.setMatricula(980862);
         coordenador.setCursoCoordenado("Sistemas de Informação");
-        coordenador.setBonus("Aulas extras em Jogos Digitais");
+        coordenador.setBonus(25);
         coordenador.setSalario(3500.00);
         coordenador.setDepartamento("Instituto de TI");
 
@@ -47,7 +47,7 @@ public class Universidade {
                 coordenador.getCursoCoordenado());
         System.out.printf("Departamento e salário: %s - R$%.2f\n", coordenador.getDepartamento(),
                 coordenador.getSalario());
-        System.out.printf("Bônus: %s\n", coordenador.getBonus());
+        System.out.printf("Bônus: %d%%\n", coordenador.getBonus());
 
         /* IMPRESSÃO FUNCIONARIO */
         System.out.printf("\nNome: %s %s\n", funcionario.getNome(), funcionario.getSobrenome());
