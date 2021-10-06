@@ -8,22 +8,22 @@ public class ContaCorrente extends Conta {
     private int numeroDeTransferencia;
 
     /*
-     * MÉTODO SOBREESCRITO QUE ALÉM DE DEBITAR O VALOR DO SALDO ATUAL, DEBITA A TAXA
-     * DE TRANSFERÊNCIA TAMBÉM. APÓS ISSO, VERIFICA SE FORAM REALIZADOS GRUPOS DE 5
-     * TRANSFERÊNCIAS. SE SIM, DEBITA E RETORNA O SALDO ATUAL - TAXA DE MANUTENÇÃO,
-     * SE NÃO, APENAS RETORNA O SALDO ATUAL.
+     * MÉTODO SOBREESCRITO QUE RECEBE UM VALOR POR PARAMETRO E VERIFICA SE FORAM
+     * REALIZADOS GRUPOS DE 5 TRANSFERÊNCIAS. SE SIM, DEBITA O VALOR RECEBIDO, TAXA
+     * DE MANUTENÇÃO E TRANSFERENCIA, SE NÃO, SOMENTE VALOR E TAXA DE TRANSFERENCIA.
      */
     @Override
     public double realizaTransferencia(double valor) {
         numeroDeTransferencia++;
 
         double saldo = this.getSaldo();
-        this.setSaldo((saldo - valor) - taxaTransferencia);
 
         if (numeroDeTransferencia % 5 == 0) {
-            return (this.getSaldo() - taxaManutencao);
+            this.setSaldo((saldo - valor) - taxaTransferencia - taxaManutencao);
+            return valor;
         } else {
-            return this.getSaldo();
+            this.setSaldo((saldo - valor) - taxaTransferencia);
+            return valor;
         }
     }
 
