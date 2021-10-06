@@ -23,6 +23,8 @@ public class Teste {
 
         /* IMPRESSÃO DE CABEÇALHO */
         System.out.println("***** CAPBANCO *****");
+
+        /* IMPRESSÃO DOS ATRIBUTOS */
         System.out.printf("\nConta - código cliente: %d\n", conta.getCodigoCliente());
         System.out.printf("Saldo prévio: R$%.2f\n", saldoConta);
         System.out.printf("Saldo atual pós transferência: R$%.2f\n", conta.getSaldo());
@@ -32,9 +34,14 @@ public class Teste {
         System.out.printf("Saldo atual pós transferência: R$%.2f\n", cc.getSaldo());
 
         /* REALIZAÇÃO DE 4 TRANSFERÊNCIAS */
-        cc.realizaTransferencia(670.00);
-        cc.realizaTransferencia(389.00);
-        cc.realizaTransferencia(283.00);
+        cc.realizaTransferencia(170.00);
+        cc.realizaTransferencia(89.00);
+        cc.realizaTransferencia(83.00);
         cc.realizaTransferencia(98.00);
+
+        /* IMPRESSÃO APÓS NOVAS TRANSFERÊNCIAS */
+        System.out.printf("\nConta Corrente - código cliente: %d\n", cc.getCodigoCliente());
+        System.out.printf("Saldo prévio: R$%.2f\n", saldoCc);
+        System.out.printf("Saldo atual pós transferência: R$%.2f\n", cc.getSaldo());
     }
 }
