@@ -9,6 +9,7 @@ public class ContaCorrente extends Conta {
 
     @Override
     public double realizaTransferencia(double valor) {
+        numeroDeTransferencia++;
         double saldo = this.getSaldo();
         this.setSaldo(saldo - taxaTransferencia);
         return valor;
