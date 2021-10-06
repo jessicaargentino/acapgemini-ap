@@ -14,5 +14,9 @@ public class Teste {
         conta.setSaldo(1000.00);
         cc.setCodigoCliente(198970);
         cc.setSaldo(1500.00);
+
+        /* CHAMADA DO MÉTODO DE TRANSFERÊNCIA PARA CADA OBJETO */
+        conta.realizaTransferencia(500.00);
+        cc.realizaTransferencia(200.00);
     }
 }
