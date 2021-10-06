@@ -6,4 +6,9 @@ public class ContaCorrente extends Conta {
     private double taxaTransferencia = 10.50;
     private double taxaManuntencao = 2.50;
     private int numeroDeTransferencia;
+
+    @Override
+    public double realizaTransferencia(double valor) {
+        return super.realizaTransferencia(valor);
+    }
 }
