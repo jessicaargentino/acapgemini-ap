@@ -30,5 +30,11 @@ public class Teste {
         System.out.printf("\nConta Corrente - código cliente: %d\n", cc.getCodigoCliente());
         System.out.printf("Saldo prévio: R$%.2f\n", saldoCc);
         System.out.printf("Saldo atual pós transferência: R$%.2f\n", cc.getSaldo());
+
+        /* REALIZAÇÃO DE 4 TRANSFERÊNCIAS */
+        cc.realizaTransferencia(670.00);
+        cc.realizaTransferencia(389.00);
+        cc.realizaTransferencia(283.00);
+        cc.realizaTransferencia(98.00);
     }
 }
