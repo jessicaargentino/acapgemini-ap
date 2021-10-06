@@ -19,6 +19,7 @@ public class ContaCorrente extends Conta {
 
         double saldo = this.getSaldo();
         this.setSaldo((saldo - valor) - taxaTransferencia);
+
         if (numeroDeTransferencia % 5 == 0) {
             return (this.getSaldo() - taxaManutencao);
         } else {
