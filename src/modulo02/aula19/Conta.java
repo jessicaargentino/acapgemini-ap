@@ -22,4 +22,10 @@ public class Conta {
     public int getCodigoCliente() {
         return codigoCliente;
     }
+
+    /* METÓDO QUE RECEBE UM VALOR E O REDUZ DO SALDO ATUAL */
+    public double realizaTransferencia(double valor) {
+        this.saldo -= valor;
+        return valor;
+    }
 }
