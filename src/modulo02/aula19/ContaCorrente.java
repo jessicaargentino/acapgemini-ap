@@ -9,26 +9,22 @@ public class ContaCorrente extends Conta {
 
     /*
      * MÉTODO SOBREESCRITO QUE ALÉM DE DEBITAR O VALOR DO SALDO ATUAL, DEBITA A TAXA
-     * DE TRANSFERÊNCIA TAMBÉM.
+     * DE TRANSFERÊNCIA TAMBÉM. APÓS ISSO, VERIFICA SE FORAM REALIZADOS GRUPOS DE 5
+     * TRANSFERÊNCIAS. SE SIM, DEBITA E RETORNA O SALDO ATUAL - TAXA DE MANUTENÇÃO,
+     * SE NÃO, APENAS RETORNA O SALDO ATUAL.
      */
     @Override
     public double realizaTransferencia(double valor) {
         numeroDeTransferencia++;
+
         double saldo = this.getSaldo();
         this.setSaldo(saldo - taxaTransferencia);
-        return valor;
-    }
 
-    /*
-     * MÉTODO QUE VERIFICA SE FORAM REALIZADOS GRUPOS DE 5 TRANSFERÊNCIAS. SE SIM,
-     * DEBITA DO SALDO ATUAL A TAXA DE MANUTENÇÃO, SE NÃO, APENAS RETORNA O SALDO
-     * ATUAL.
-     */
-    public double debitaTaxaManutencao() {
         if (numeroDeTransferencia % 5 == 0) {
             return (this.getSaldo() - taxaManutencao);
         } else {
             return this.getSaldo();
         }
     }
+
 }
