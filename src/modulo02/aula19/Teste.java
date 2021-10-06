@@ -18,5 +18,8 @@ public class Teste {
         /* CHAMADA DO MÉTODO DE TRANSFERÊNCIA PARA CADA OBJETO */
         conta.realizaTransferencia(500.00);
         cc.realizaTransferencia(200.00);
+
+        /* IMPRESSÃO DE CABEÇALHO */
+        System.out.println("***** CAPBANCO *****");
     }
 }
