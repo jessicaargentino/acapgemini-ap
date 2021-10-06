@@ -3,7 +3,7 @@ package modulo02.aula19;
 /* CLASSE FILHA DE CONTA */
 public class ContaCorrente {
     /* DEFINIÇÃO DOS ATRIBUTOS */
-    private double taxaTransferencia;
-    private double taxaManuntencao;
+    private double taxaTransferencia = 10.50;
+    private double taxaManuntencao = 2.50;
     private int numeroDeTransferencia;
 }
