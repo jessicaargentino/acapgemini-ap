@@ -20,4 +20,12 @@ public class ContaCorrente {
     public void realizaSaque(double valor) {
         this.saldo -= valor - taxaSaque;
     }
+
+    /*
+     * MÉTODO QUE RECEBE UM VALOR POR PARAMETRO E O REALIZA O O DEPÓSITO,
+     * ACRESCENTANDO O VALOR AO SALDO.
+     */
+    public void recebeDeposito(double valor) {
+        this.saldo += valor;
+    }
 }
