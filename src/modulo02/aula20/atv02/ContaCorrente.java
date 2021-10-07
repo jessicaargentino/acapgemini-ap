@@ -6,4 +6,10 @@ public class ContaCorrente {
     private double taxaSaque;
     private int codigoCliente;
 
+    /* DEFINIÇÃO DO MÉTODO CONSTRUTOR DA CLASSE */
+    public ContaCorrente(double saldo, double taxaSaque, int codigoCliente) {
+        this.saldo = saldo;
+        this.taxaSaque = taxaSaque;
+        this.codigoCliente = codigoCliente;
+    }
 }
