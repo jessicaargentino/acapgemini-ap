@@ -28,4 +28,27 @@ public class ContaCorrente {
     public void recebeDeposito(double valor) {
         this.saldo += valor;
     }
+
+    /* GETTERS */
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public double getTaxaSaque() {
+        return taxaSaque;
+    }
+
+    public int getCodigoCliente() {
+        return codigoCliente;
+    }
+
+    /*
+     * SOBREESCRITA DO MÉTODO TOSTRING DA CLASSE OBJECT PARA IMPRESSÃO DOS ATRIBUTOS
+     */
+    @Override
+    public String toString() {
+        String retorno = "Código cliente: " + this.getCodigoCliente() + "\nSaldo: " + this.getSaldo()
+                + "\nTaxa de saque: R$" + this.getTaxaSaque();
+        return retorno;
+    }
 }
