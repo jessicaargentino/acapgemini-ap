@@ -12,4 +12,12 @@ public class ContaCorrente {
         this.taxaSaque = taxaSaque;
         this.codigoCliente = codigoCliente;
     }
+
+    /*
+     * MÉTODO QUE RECEBE UM VALOR POR PARAMETRO E O REALIZA O SAQUE DIMINUINDO O
+     * MESMO DO SALDO. DIMINUI TAMBÉM A TAXA DE SAQUE DO SALDO;
+     */
+    public void realizaSaque(double valor) {
+        this.saldo -= valor - taxaSaque;
+    }
 }
