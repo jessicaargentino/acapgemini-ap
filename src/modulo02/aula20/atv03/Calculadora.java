@@ -12,7 +12,12 @@ public class Calculadora {
     }
 
     /* MÉTODO QUE RECEBE TRÊS VALORES FLOAT E RETORNA A SOMA ENTRE ELES */
-    public double soma(float num1, float num2, float num3) {
+    public float soma(float num1, float num2, float num3) {
+        return num1 + num2 + num3;
+    }
+
+    /* MÉTODO QUE RECEBE TRÊS VALORES LONG E RETORNA A SOMA ENTRE ELES */
+    public long soma(long num1, long num2, long num3) {
         return num1 + num2 + num3;
     }
 }
