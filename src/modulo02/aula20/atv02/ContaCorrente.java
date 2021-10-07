@@ -7,9 +7,8 @@ public class ContaCorrente {
     private int codigoCliente;
 
     /* DEFINIÇÃO DO MÉTODO CONSTRUTOR DA CLASSE */
-    public ContaCorrente(double saldo, double taxaSaque, int codigoCliente) {
+    public ContaCorrente(double saldo, int codigoCliente) {
         this.saldo = saldo;
-        this.taxaSaque = taxaSaque;
         this.codigoCliente = codigoCliente;
     }
 
