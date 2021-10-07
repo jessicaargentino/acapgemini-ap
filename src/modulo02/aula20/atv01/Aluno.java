@@ -30,4 +30,11 @@ public class Aluno {
     public int getMatricula() {
         return matricula;
     }
+
+    /* SOBREESCRITA DO MÉTODO TOSTRING DA CLASSE OBJECT */
+    @Override
+    public String toString() {
+        String retorno = "Matrícula: " + matricula + "\n" + "Nome completo: " + nomeCompleto + "\n" + "Idade: " + idade;
+        return retorno;
+    }
 }
