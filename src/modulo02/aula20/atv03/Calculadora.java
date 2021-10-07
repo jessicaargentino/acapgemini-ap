@@ -10,4 +10,9 @@ public class Calculadora {
     public double soma(double num1, double num2) {
         return num1 + num2;
     }
+
+    /* MÉTODO QUE RECEBE TRÊS VALORES FLOAT E RETORNA A SOMA ENTRE ELES */
+    public double soma(float num1, float num2, float num3) {
+        return num1 + num2 + num3;
+    }
 }
