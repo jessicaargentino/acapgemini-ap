@@ -17,7 +17,7 @@ public class ContaCorrente {
      * MESMO DO SALDO. DIMINUI TAMBÉM A TAXA DE SAQUE DO SALDO;
      */
     public void realizaSaque(double valor) {
-        this.saldo -= valor - taxaSaque;
+        this.saldo = (this.saldo - valor - taxaSaque);
     }
 
     /*
@@ -46,7 +46,7 @@ public class ContaCorrente {
      */
     @Override
     public String toString() {
-        String retorno = "Código cliente: " + this.getCodigoCliente() + "\nSaldo: " + this.getSaldo()
+        String retorno = "Código cliente: " + this.getCodigoCliente() + "\nSaldo: R$" + this.getSaldo()
                 + "\nTaxa de saque: R$" + this.getTaxaSaque();
         return retorno;
     }
