@@ -46,8 +46,7 @@ public class ContaCorrente {
      */
     @Override
     public String toString() {
-        String retorno = "Código cliente: " + this.getCodigoCliente() + "\nSaldo: R$" + this.getSaldo()
-                + "\nTaxa de saque: R$" + this.getTaxaSaque();
-        return retorno;
+        return "Código cliente: " + this.getCodigoCliente() + "\nSaldo: R$" + this.getSaldo() + "\nTaxa de saque: R$"
+                + this.getTaxaSaque();
     }
 }
