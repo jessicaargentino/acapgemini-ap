@@ -5,7 +5,7 @@ package modulo02.aula19;
 * funções do método principal, além de debitar a taxa de transferência do saldo
 * da conta. O método de transferência da Conta Corrente também deve
 * armazenar, no atributo número de transferencias, a quantidade de
-* transferências realizadas e a cada 5 transferências deve debitar do saldo, o
+* transferências realizadas e a cada cinco transferências deve debitar do saldo, o
 * valor da taxa de manutenção de conta.
 * 
 * Altere a classe Teste, para realizar mais de 5 transferências na Conta
