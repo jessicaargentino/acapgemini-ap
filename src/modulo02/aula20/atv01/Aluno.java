@@ -1,5 +1,12 @@
 package modulo02.aula20.atv01;
 
+/* Crie uma classe Aluno com os atributos privados nome completo, idade e
+ * matricula. Crie os métodos getters e setters para cada atributo da classe
+ * Aluno. Crie o métodos toString na classe Aluno, fazendo um override no
+ * método padrão da classe Object. Crie uma classe Tela com um método main.
+ * Crie na classe Tela, 2 objetos da classe Aluno, chame os métodos setters para
+ * inserir valores e imprima os objetos utilizando o método toString. */
+
 public class Aluno {
     /* DEFINIÇÃO DOS ATRIBUTOS */
     private String nomeCompleto;

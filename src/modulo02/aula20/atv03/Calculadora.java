@@ -1,5 +1,15 @@
 package modulo02.aula20.atv03;
 
+/* Crie uma classe Calculadora. Adicione a classe Calculadora um método soma
+* que recebe dois parâmetros e inteiros e retorna um inteiro com o resultado.
+* Adicione a classe Calculadora um método soma que recebe dois parâmetros
+* double e retorna um double com o resultado. Adicione a classe Calculadora
+* um método soma que recebe três parâmetros float e retorna um float com o
+* resultado. Adicione a classe Calculadora um método soma que recebe três
+* parâmetros long e retorna um long com o resultado. Crie uma classe Tela com
+* um método main, crie um objeto da classe Calculadora, chame cada método
+* criado e imprima seus resultados. */
+
 public class Calculadora {
     /* MÉTODO QUE RECEBE DOIS VALORES INTEIROS E RETORNA A SOMA ENTRE ELES */
     public int soma(int num1, int num2) {
