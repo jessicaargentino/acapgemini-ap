@@ -1,5 +1,16 @@
 package modulo02.aula19;
 
+/* Altere a classe Conta Corrente construindo um método para sobrescrever o
+* método de transfêrencia, da classe Conta. _ O novo método deve utilizar as
+* funções do método principal, além de debitar a taxa de transferência do saldo
+* da conta. O método de transferência da Conta Corrente também deve
+* armazenar, no atributo número de transferencias, a quantidade de
+* transferências realizadas e a cada 5 transferências deve debitar do saldo, o
+* valor da taxa de manutenção de conta.
+* 
+* Altere a classe Teste, para realizar mais de 5 transferências na Conta
+* Corrente, antes de imprimir os resultados. */
+
 public class Teste {
     public static void main(String[] args) {
         /*

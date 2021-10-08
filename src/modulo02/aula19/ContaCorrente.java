@@ -1,5 +1,13 @@
 package modulo02.aula19;
 
+/* Crie uma classe Conta que deve possuir os atributos privados: saldo e código
+ * do cliente. Crie os métodos set e get para os atributos privados da classe
+ * Conta. _ Crie uma classe Conta Corrente com os atributos privados: taxa
+ * transferência, taxa manutenção e número de transferências. Defina um valor
+ * padrão para taxa de transferência de R$10.50, um valor de R$2.50 para taxa de
+ * manutenção e 0 para o número de transferências; A classe Conta Corrente
+ * deve herdar da classe Conta. */
+
 /* CLASSE FILHA DE CONTA */
 public class ContaCorrente extends Conta {
     /* DEFINIÇÃO DOS ATRIBUTOS */
