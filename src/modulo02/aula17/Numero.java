@@ -1,6 +1,11 @@
 package modulo02.aula17;
 
 public class Numero {
+    
+    /* Crie uma classe Números com um método main. _ Crie nesta classe um array de
+     * números inteiros com 10 posições. _ Adicione um valor para cada posição do
+     * array. _ Imprima ao final da execução do main, todas as posições do array
+     * utilizando o laço de repetição for. */
     public static void main(String[] args) {
         /* DECLARAÇÃO DO ARRAY DE INTEIROS COM 10 POSIÇÕES */
         int numero[] = new int[10];
