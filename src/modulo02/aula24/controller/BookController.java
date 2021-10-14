@@ -23,4 +23,13 @@ public class BookController {
     public ArrayList<Book> read() {
         return book;
     }
+
+     /**
+     * CRUD - Método DELETE: Exclui um objeto Categoria
+     * 
+     * @param b objeto da classe Book
+     */
+    public void delete(Book b) {
+        book.remove(b);
+    }
 }
