@@ -15,4 +15,12 @@ public class BookController {
     public void create(Book b) {
         this.book.add(b);
     }
+
+    /*
+     * CRUD - Método READ: Ler um objeto de Categoria/retornar os objetos de
+     * Categoria presentes no ArrayList
+     */
+    public ArrayList<Book> read() {
+        return book;
+    }
 }
