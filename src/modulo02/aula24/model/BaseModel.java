@@ -7,4 +7,9 @@ public class BaseModel {
     public BaseModel() {
         this.id++;
     }
+
+    /** Getter */
+    public int getId() {
+        return id;
+    }
 }
