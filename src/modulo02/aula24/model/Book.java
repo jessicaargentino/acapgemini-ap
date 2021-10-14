@@ -47,4 +47,15 @@ public class Book extends BaseModel {
     public int getYearOfPublication() {
         return yearOfPublication;
     }
+
+    /** Sobreescrita do equals para comparação de um objeto com outro */
+    @Override
+    public boolean equals(Object obj) {
+        Book book = (Book) obj;
+        if (this.getId() == book.getId()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
