@@ -24,7 +24,21 @@ public class BookController {
         return book;
     }
 
-     /**
+    /**
+     * CRUD - Método UPDATE: Verifica se o ArrayList de Book possui o objeto b
+     * passado por parâmetro, essa verificação ocorre utilizando verificando o id
+     * pelo equals sobreescrito da classe Book. Se existir um elemento de mesmo id,
+     * ele é excluído e o objeto de id passado por parametro é adicionado ao
+     * ArrayList.
+     */
+    public void update(Book b) {
+        if (book.contains(b)) {
+            this.delete(b);
+            this.create(b);
+        }
+    }
+
+    /**
      * CRUD - Método DELETE: Exclui um objeto Categoria
      * 
      * @param b objeto da classe Book
