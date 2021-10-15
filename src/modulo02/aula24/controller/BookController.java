@@ -9,7 +9,7 @@ public class BookController {
 
     /**
      * CRUD - Método CREATE: Criar um objeto de Categoria
-     * 
+     *
      * @param b objeto da classe Book
      */
     public void create(Book b) {
@@ -30,7 +30,7 @@ public class BookController {
      * pelo equals sobreescrito da classe Book. Se existir um elemento de mesmo id,
      * ele é excluído e o objeto de id passado por parametro é adicionado ao
      * ArrayList.
-     * 
+     *
      * @param b objeto da classe Book
      */
     public void update(Book b) {
@@ -42,7 +42,7 @@ public class BookController {
 
     /**
      * CRUD - Método DELETE: Exclui um objeto Categoria
-     * 
+     *
      * @param b objeto da classe Book
      */
     public void delete(Book b) {

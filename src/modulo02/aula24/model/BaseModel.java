@@ -1,15 +1,19 @@
 package modulo02.aula24.model;
 
+import java.util.Random;
+
 public class BaseModel {
     private int id;
+    private Random random = new Random();
 
-    /** Construtor para incrementação do id a cada instância */
     public BaseModel() {
-        this.id++;
+        this.id = random.nextInt(1000);
     }
 
-    /** Getter */
-    public int getId() {
+    /**
+     * Getter
+     */
+    public long getId() {
         return id;
     }
 }
