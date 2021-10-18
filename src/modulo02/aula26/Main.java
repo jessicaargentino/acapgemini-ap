@@ -1,5 +1,18 @@
 package modulo02.aula26;
 
+/**
+ * Crie uma classe veiculo com atributos públicos: marca, modelo e placa. Crie
+ * uma classe carro com os atributos públicos: número de portas e capacidade do
+ * porta-malas. Crie uma classe Main com um método main. Crie um objeto de
+ * classe Veículo e uma de classe Carro e atribua valores para as propriedade de
+ * cada objeto. Crie um objeto da classe Object através da instância da classe
+ * Veículo. Crie um objeto da classe Object através da instância da classe
+ * Carro. Converta o primeiro objeto da Object novamente para um novo objeto da
+ * classe Veículo. Converta o segundo objeto da Object novamente para um novo
+ * objeto da classe Carro. Imprima todos dos dados do objeto de Veículo
+ * convertido. Imprima todos dos dados do objeto de Carro convertido.
+ */
+
 public class Main {
     public static void main(String[] args) {
         /** Criação de dois objetos através das instâncias da classe Vehicle e Car */
