@@ -36,5 +36,12 @@ public class Main {
         Object objectOne = computer;
         Object objectTwo = notebook;
         Object objectThree = desktop;
+
+        /**
+         * Conversão explícita dos objetos de object para Computer, Notebook e Desktop
+         */
+        Computer computerOne = (Computer) objectOne;
+        Notebook notebookOne = (Notebook) objectTwo;
+        Desktop desktopOne = (Desktop) objectThree;
     }
 }
