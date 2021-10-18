@@ -25,17 +25,14 @@ public class Main {
         Vehicle vehicleOne = (Vehicle) objectOne;
         Car carOne = (Car) objectTwo;
 
-        /** Impressão dos objetos convertidos */
-        printObject(vehicleOne);
-        printObject(carOne);
-    }
+        /** Impressão dos atributos dos objetos convertidos */
+        System.out.println("***** VEÍCULO *****");
+        System.out.println("Marca: " + vehicleOne.brand);
+        System.out.println("Modelo: " + vehicleOne.model);
+        System.out.println("Placa: " + vehicleOne.plate);
 
-    /**
-     * Método que recebe um objeto por parâmetro e imprime seus atributos
-     * 
-     * @param o objeto de uma classe
-     */
-    public static void printObject(Object o) {
-        System.out.println(o.toString());
+        System.out.println("\n***** CARRO *****");
+        System.out.println("Número de portas: " + carOne.numberOfDoors);
+        System.out.println("Capacidade do porta-mala: " + carOne.capacityOfTrunk);
     }
 }
