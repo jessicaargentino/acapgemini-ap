@@ -43,5 +43,10 @@ public class Main {
         Computer computerOne = (Computer) objectOne;
         Notebook notebookOne = (Notebook) objectTwo;
         Desktop desktopOne = (Desktop) objectThree;
+
+        /** Impressão dos dados dos objetos */
+        System.out.println("***** COMPUTADOR *****" + computerOne);
+        System.out.println("\n***** NOTEBOOK *****" + notebookOne);
+        System.out.println("\n***** DESKTOP *****" + desktopOne);
     }
 }
