@@ -7,6 +7,7 @@ public class Computer {
 
     @Override
     public String toString() {
-        return "\nMarca: " + this.brand + "\nMemória RAM: " + this.memoryRam + "\nDisco rígido: " + this.hardDisk;
+        return "\nMarca: " + this.brand + "\nMemória RAM: " + this.memoryRam + "\nDisco rígido: "
+                + this.hardDisk;
     }
 }
