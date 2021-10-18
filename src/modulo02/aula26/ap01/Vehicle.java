@@ -1,4 +1,4 @@
-package modulo02.aula26;
+package modulo02.aula26.ap01;
 
 public class Vehicle {
     public String brand;

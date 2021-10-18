@@ -1,4 +1,4 @@
-package modulo02.aula26;
+package modulo02.aula26.ap01;
 
 /**
  * Crie uma classe veiculo com atributos públicos: marca, modelo e placa. Crie
