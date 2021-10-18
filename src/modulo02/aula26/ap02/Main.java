@@ -28,5 +28,13 @@ public class Main {
         desktop.computerCase = "Ride Mode Glass 06";
         desktop.externalMonitor = "Monitor LED 24 polegadas";
         desktop.powerSuply = "Fortrek 200w";
+
+        /**
+         * Criação de três objetos da classe Object apontando pro mesmo local de memória
+         * que os objetos computer, notebook e desktop
+         */
+        Object objectOne = computer;
+        Object objectTwo = notebook;
+        Object objectThree = desktop;
     }
 }
