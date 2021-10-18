@@ -6,6 +6,13 @@ import java.util.Scanner;
 import modulo02.aula24.controller.BookController;
 import modulo02.aula24.model.Book;
 
+/**
+ * Crie um sistema de cadastro de livros. O sistema deve utilizar o padrão de
+ * arquitetura MVC. O modelo deve possuir um id e outros atributos de sua
+ * escolha. A controller deve possuir os quatro métodos de CRUD e deve utilizar
+ * um ArrayList privado para manter os dados. A view deve possuir um menu para
+ * usuário poder escolher quais das operações de CRUD utilizar.
+ */
 public class BookView {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -77,7 +84,6 @@ public class BookView {
      */
     public static void createBook(BookController newBookController, Scanner input) {
         Book newBook = new Book();
-
         System.out.print("Nome do livro: ");
         newBook.setName(input.nextLine());
         System.out.print("Descrição: ");
@@ -100,7 +106,7 @@ public class BookView {
     public static void listBook(BookController newBookController) {
         ArrayList<Book> book = newBookController.read();
         for (Book b : book) {
-            System.out.printf("ID: %d\n", b.getId());
+            System.out.printf("ID: %s\n", b.getId());
             System.out.printf("Nome: %s\n", b.getName());
             System.out.printf("Descrição: %s\n", b.getDescription());
             System.out.printf("Autor(a): %s\n", b.getAuthor());
@@ -117,7 +123,7 @@ public class BookView {
      */
     public static void updateBook(BookController newBookController, Book newBook, Scanner input) {
         System.out.print("ID do livro a ser alterado: ");
-        int id = Integer.parseInt(input.nextLine());
+        String id = input.nextLine();
         System.out.print("Nome do livro: ");
         newBook.setName(input.nextLine());
         System.out.print("Descrição: ");
@@ -139,8 +145,9 @@ public class BookView {
      * @param input             entrada de dados pelo usuário
      */
     public static void deleteBook(BookController newBookController, Book newBook, Scanner input) {
+        ArrayList<Book> book = new ArrayList<Book>();
         System.out.print("ID do livro a ser deletado: ");
-        int id = Integer.parseInt(input.nextLine());
+        String id = input.nextLine();
         newBookController.delete(newBook);
     }
 

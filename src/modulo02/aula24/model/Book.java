@@ -7,7 +7,9 @@ public class Book extends BaseModel {
     private String publisher;
     private int yearOfPublication;
 
-    /** Getters e setters */
+    /**
+     * Getters e setters
+     */
     public void setName(String name) {
         this.name = name;
     }
@@ -48,7 +50,9 @@ public class Book extends BaseModel {
         return yearOfPublication;
     }
 
-    /** Sobreescrita do equals para comparação de um objeto com outro */
+    /**
+     * Sobreescrita do equals para comparação de um objeto com outro
+     */
     @Override
     public boolean equals(Object obj) {
         Book book = (Book) obj;
