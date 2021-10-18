@@ -1,5 +1,25 @@
 package modulo02.aula26.ap02;
 
+/**
+ * Crie uma classe computador com atributos públicos: marca, memoria ram,
+ * processador e disco rigido. Crie uma classe notebook que herda de computador
+ * com os atributos públicos: bateria, velocidade wifi e versão bluetooth. Crie
+ * uma classe desktop que herda de computador com os atributos públicos: tamanho
+ * gabinete, monitor externo e fonte. Crie uma sobrescrita do método toString
+ * nas três classes para imprimir todos os dados. Crie uma classe Main com um
+ * método main. Crie um objeto da classe Computador, um da classe Notebook, um
+ * da classe Desktop e atribua valores para as propriedade de cada objeto. Crie
+ * um objeto da classe Object através da instância da classe Computador. Crie um
+ * objeto da classe Object através da instância da classe Notebook. Crie um
+ * objeto da classe Object através da instância da classe Desktop. Converta o
+ * primeiro objeto da Object novamente para um novo objeto da classe Computador.
+ * Converta o segundo objeto da Object novamente para um novo objeto da classe
+ * Notebook. Converta o terceiro objeto da Object novamente para um novo objeto
+ * da classe Desktop. Imprima todos dos dados do objeto de Computador convertido
+ * através do toString. Imprima todos dos dados do objeto de Notebook convertido
+ * através do toString. Imprima todos dos dados do objeto de Desktop convertido
+ * através do toString.
+ */
 public class Main {
     public static void main(String[] args) {
         /**
