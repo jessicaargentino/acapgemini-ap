@@ -1,5 +1,5 @@
 package modulo02.aula26;
 
-public class Veiculo{
+public class Vehicle{
     
 }
