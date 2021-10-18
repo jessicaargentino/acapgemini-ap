@@ -7,7 +7,7 @@ public class Notebook extends Computer {
 
     @Override
     public String toString() {
-        return "\nBateria: " + this.batery + "\nVelocidade wifi: " + this.wifiSpeed + "\nVersão bluetooth: "
+        return super.toString() + "\nBateria: " + this.batery + "\nVelocidade wifi: " + this.wifiSpeed + "\nVersão bluetooth: "
                 + this.bluetoothVersion;
     }
 }

@@ -7,7 +7,7 @@ public class Desktop extends Computer {
 
     @Override
     public String toString() {
-        return "\nGabinete: " + this.computerCase + "\nMonitor externo: " + this.externalMonitor + "\nFonte: "
+        return super.toString() + "\nGabinete: " + this.computerCase + "\nMonitor externo: " + this.externalMonitor + "\nFonte: "
                 + this.powerSuply;
     }
 }
