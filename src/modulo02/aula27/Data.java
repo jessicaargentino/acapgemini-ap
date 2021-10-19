@@ -20,17 +20,23 @@ public class Data {
      * @param object objeto de uma Classe
      */
     public void add(Object object) {
-        if (this.currentPosition < data.length) {
-            this.data[currentPosition] = object;
-            this.currentPosition++;
+        if (this.currentPosition < this.data.length) {
+            data[currentPosition++] = object;
         } else {
-            capacity += 5;
-            Object[] dataNew = new Object[capacity];
-            for (int n = 0; n < this.data.length; n++) {
-                dataNew[n] = this.data[n];
-            }
-            this.data = dataNew;
+            resize();
         }
+    }
+
+    /**
+     * Método que redimensiona o tamanho do Array para o dobro da capacidade atual
+     */
+    public void resize() {
+        this.capacity = capacity * 2;
+        Object[] newData = new Object[capacity];
+        for (int n = 0; n < this.data.length; n++) {
+            newData[n] = this.data[n];
+        }
+        this.data = newData;
     }
 
     /**
@@ -48,7 +54,7 @@ public class Data {
      * @param object objeto de uma Classe
      */
     public void remove(Object object) {
-        for (int n = 0; n < this.data.length; n++) {
+        for (int n = 0; n < this.currentPosition; n++) {
             if (this.data[n].equals(object)) {
                 rearrange(n);
                 this.currentPosition--;
