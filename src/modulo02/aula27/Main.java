@@ -31,5 +31,8 @@ public class Main {
 
         /** Verificação de peopleTwo no Array */
         System.out.println(data.contains(peopleTwo));
+
+        /** Remoção do aluno do Array */
+        data.remove(student);
     }
 }
