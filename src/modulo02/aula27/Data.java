@@ -41,4 +41,30 @@ public class Data {
     public int size() {
         return currentPosition + 1;
     }
+
+    /**
+     * Método que remove um objeto do Array
+     * 
+     * @param object objeto de uma Classe
+     */
+    public void remove(Object object) {
+        for (int n = 0; n < data.length; n++) {
+            if (data[n].equals(object)) {
+                rearrange(n);
+                currentPosition--;
+            }
+        }
+    }
+
+    /**
+     * Método que reposiciona os elementos do Array uma posição a frente da posição
+     * que foi excluída
+     * 
+     * @param position posição deletada do Array
+     */
+    public void rearrange(int position) {
+        for (int n = position; n < data.length; n++) {
+            this.data[n] = this.data[n + 1];
+        }
+    }
 }
