@@ -32,4 +32,13 @@ public class Data {
             data = dataNew;
         }
     }
+
+    /**
+     * Método que retorna a quantidade de elementos que o Array possuí
+     * 
+     * @return quantidade de elementos do Array
+     */
+    public int size() {
+        return currentPosition + 1;
+    }
 }
