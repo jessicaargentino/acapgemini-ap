@@ -20,16 +20,16 @@ public class Data {
      * @param object objeto de uma Classe
      */
     public void add(Object object) {
-        if (currentPosition < data.length) {
-            data[currentPosition] = object;
-            currentPosition++;
+        if (this.currentPosition < data.length) {
+            this.data[currentPosition] = object;
+            this.currentPosition++;
         } else {
             capacity += 5;
             Object[] dataNew = new Object[capacity];
-            for (int n = 0; n < data.length; n++) {
-                dataNew[n] = data[n];
+            for (int n = 0; n < this.data.length; n++) {
+                dataNew[n] = this.data[n];
             }
-            data = dataNew;
+            this.data = dataNew;
         }
     }
 
@@ -39,7 +39,7 @@ public class Data {
      * @return quantidade de elementos do Array
      */
     public int size() {
-        return currentPosition + 1;
+        return this.currentPosition + 1;
     }
 
     /**
@@ -48,10 +48,10 @@ public class Data {
      * @param object objeto de uma Classe
      */
     public void remove(Object object) {
-        for (int n = 0; n < data.length; n++) {
-            if (data[n].equals(object)) {
+        for (int n = 0; n < this.data.length; n++) {
+            if (this.data[n].equals(object)) {
                 rearrange(n);
-                currentPosition--;
+                this.currentPosition--;
             }
         }
     }
@@ -63,7 +63,7 @@ public class Data {
      * @param position posição deletada do Array
      */
     public void rearrange(int position) {
-        for (int n = position; n < data.length; n++) {
+        for (int n = position; n < this.data.length - 1; n++) {
             this.data[n] = this.data[n + 1];
         }
     }
@@ -76,8 +76,8 @@ public class Data {
      * @return true se possuir, false se não possuir
      */
     public boolean contains(Object object) {
-        for (int n = 0; n < currentPosition; n++) {
-            if (data[n].equals(object)) {
+        for (int n = 0; n < this.currentPosition; n++) {
+            if (this.data[n].equals(object)) {
                 return true;
             }
         }
