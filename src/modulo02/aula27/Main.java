@@ -22,5 +22,8 @@ public class Main {
         /** Adição de people e student no Array */
         data.add(people);
         data.add(student);
+
+        /** Novo objeto de pessoas com mesmos dados */
+        People peopleTwo = people;
     }
 }
