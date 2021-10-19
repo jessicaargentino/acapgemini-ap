@@ -67,4 +67,20 @@ public class Data {
             this.data[n] = this.data[n + 1];
         }
     }
+
+    /**
+     * Método que percorre as posições ocupadas do Array e verifica se determinado
+     * objeto está na mesma. Se estiver, retorna true, se não, false.
+     * 
+     * @param object objeto de uma Classe
+     * @return true se possuir, false se não possuir
+     */
+    public boolean contains(Object object) {
+        for (int n = 0; n < currentPosition; n++) {
+            if (data[n].equals(object)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
