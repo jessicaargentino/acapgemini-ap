@@ -4,4 +4,21 @@ public class Student extends People {
     public int registration;
     public String group;
     public String course;
+
+    /**
+     * Sobreescrita do método equals para comparar os atributos específicos do
+     * objeto
+     * 
+     * @param obj objeto de uma classe
+     */
+    @Override
+    public boolean equals(Object obj) {
+        Student student = (Student) obj;
+        if (this.registration == student.registration && this.group.equals(student.group)
+                && this.course.equals(student.course)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
