@@ -30,7 +30,7 @@ public class Data {
     /**
      * Método que redimensiona o tamanho do Array para o dobro da capacidade atual
      */
-    public void resize() {
+    private void resize() {
         this.capacity = capacity * 2;
         Object[] newData = new Object[capacity];
         for (int n = 0; n < this.data.length; n++) {
@@ -68,7 +68,7 @@ public class Data {
      * 
      * @param position posição deletada do Array
      */
-    public void rearrange(int position) {
+    private void rearrange(int position) {
         for (int n = position; n < this.data.length - 1; n++) {
             this.data[n] = this.data[n + 1];
         }
