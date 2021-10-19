@@ -20,4 +20,9 @@ public class People {
             return false;
         }
     }
+
+    @Override
+    public String toString() {
+        return String.format("\nNome: %s %s", this.name, this.lastName) + "\nIdade: " + this.age;
+    }
 }

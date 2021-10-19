@@ -21,4 +21,10 @@ public class Student extends People {
             return false;
         }
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nMatrícula: " + this.registration + "\nTurma: " + this.group + "\nCurso: "
+                + this.course;
+    }
 }
