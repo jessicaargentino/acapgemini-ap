@@ -23,7 +23,13 @@ public class Main {
         data.add(people);
         data.add(student);
 
-        /** Novo objeto de pessoas com mesmos dados */
+        /**
+         * Novo objeto de pessoas com mesmos dados/apontando para o mesmo espaço de
+         * memória
+         */
         People peopleTwo = people;
+
+        /** Verificação de peopleTwo no Array */
+        System.out.println(data.contains(peopleTwo));
     }
 }
