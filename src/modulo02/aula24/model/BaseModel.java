@@ -8,9 +8,7 @@ public abstract class BaseModel {
         this.id = counter++;
     }
 
-    /**
-     * Getter e setter
-     */
+    /** Getter e setter */
     public void setId(int id) {
         this.id = id;
     }

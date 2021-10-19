@@ -51,7 +51,7 @@ public class Book extends BaseModel {
     }
 
     /**
-     * Sobreescrita do equals para comparação de um objeto com outro
+     * Sobreescrita do equals para comparação dos atributos dos objetos
      */
     @Override
     public boolean equals(Object obj) {

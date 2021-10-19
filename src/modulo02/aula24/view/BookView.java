@@ -11,7 +11,7 @@ import modulo02.aula24.model.Book;
  * arquitetura MVC. O modelo deve possuir um id e outros atributos de sua
  * escolha. A controller deve possuir os quatro métodos de CRUD e deve utilizar
  * um ArrayList privado para manter os dados. A view deve possuir um menu para
- * usuário poder escolher quais das operações de CRUD utilizar.
+ * usuário poder escolher quais das operações de CRUD utilizar
  */
 public class BookView {
     public static void main(String[] args) {

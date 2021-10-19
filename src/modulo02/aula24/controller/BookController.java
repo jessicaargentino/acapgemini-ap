@@ -29,7 +29,7 @@ public class BookController {
      * passado por parâmetro, essa verificação ocorre utilizando verificando o id
      * pelo equals sobreescrito da classe Book. Se existir um elemento de mesmo id,
      * ele é excluído e o objeto de id passado por parametro é adicionado ao
-     * ArrayList.
+     * ArrayList
      *
      * @param b objeto da classe Book
      */
