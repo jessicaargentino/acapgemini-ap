@@ -94,7 +94,6 @@ public class BookView {
         newBook.setPublisher(input.nextLine());
         System.out.print("Ano de publicação: ");
         newBook.setYearOfPublication(Integer.parseInt(input.nextLine()));
-
         newBookController.create(newBook);
     }
 
@@ -119,11 +118,12 @@ public class BookView {
      * Método que altera um objeto da classe Book através do id
      *
      * @param newBookController objeto do ArrayList para adição do objeto de Book
+     * @param newBook           objeto de Book
      * @param input             entrada de dados pelo usuário
      */
     public static void updateBook(BookController newBookController, Book newBook, Scanner input) {
         System.out.print("ID do livro a ser alterado: ");
-        String id = input.nextLine();
+        newBook.setId(Integer.parseInt(input.nextLine()));
         System.out.print("Nome do livro: ");
         newBook.setName(input.nextLine());
         System.out.print("Descrição: ");
@@ -134,7 +134,6 @@ public class BookView {
         newBook.setPublisher(input.nextLine());
         System.out.print("Ano de publicação: ");
         newBook.setYearOfPublication(Integer.parseInt(input.nextLine()));
-
         newBookController.update(newBook);
     }
 
@@ -142,12 +141,12 @@ public class BookView {
      * Método que exclui um objeto da classe Book através do id
      *
      * @param newBookController objeto do ArrayList para adição do objeto de Book
+     * @param newBook           objeto de Book
      * @param input             entrada de dados pelo usuário
      */
     public static void deleteBook(BookController newBookController, Book newBook, Scanner input) {
-        ArrayList<Book> book = new ArrayList<Book>();
         System.out.print("ID do livro a ser deletado: ");
-        String id = input.nextLine();
+        newBook.setId(Integer.parseInt(input.nextLine()));
         newBookController.delete(newBook);
     }
 

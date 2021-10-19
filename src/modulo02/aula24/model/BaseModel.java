@@ -1,19 +1,21 @@
 package modulo02.aula24.model;
 
-import java.util.Random;
-
 public abstract class BaseModel {
-    private String id;
-    private Random random = new Random();
+    private int id;
+    private static int counter = 0;
 
     public BaseModel() {
-        this.id = String.valueOf(random.nextInt(100));
+        this.id = counter++;
     }
 
     /**
-     * Getter
+     * Getter e setter
      */
-    public String getId() {
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
         return id;
     }
 }
