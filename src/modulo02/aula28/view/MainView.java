@@ -5,6 +5,14 @@ import modulo02.aula28.controller.SeriesController;
 import modulo02.aula28.model.Film;
 import modulo02.aula28.model.Series;
 
+/**
+ * Crie um sistema de cadastro de Filmes e Séries. O sistema deve utilizar o
+ * padrão de arquitetura MVC. Os modelos devem possuir um id e outros atributos
+ * públicos de sua escolha. As controllers devem possuir os quatro métodos de
+ * CRUD e deve utilizar um ArrayList privado para manter os dados. (Utilize o
+ * conceito de Generics nas Controllers). A view deve testar as operações de
+ * CRUD para cada controller (Utilize dados fixo, sem entrada do usuário).
+ */
 public class MainView {
     public static void main(String[] args) {
         /** Instância dos controllers e dos objetos das classes Film e Series */
