@@ -3,15 +3,13 @@ package modulo02.aula27;
 public class Data {
     private Object[] data;
     private int currentPosition;
-    private int capacity;
 
     /**
      * Construtor Inicializa a variável capacidade com tamanho 5 e atribui a
      * variável como tamanho do array de Object
      */
     public Data() {
-        this.capacity = 5;
-        this.data = new Object[this.capacity];
+        this.data = new Object[5];
     }
 
     /**
@@ -21,7 +19,8 @@ public class Data {
      */
     public void add(Object object) {
         if (this.currentPosition < this.data.length) {
-            data[currentPosition++] = object;
+            this.data[currentPosition] = object;
+            currentPosition++;
         } else {
             resize();
         }
@@ -31,7 +30,7 @@ public class Data {
      * Método que redimensiona o tamanho do Array para o dobro da capacidade atual
      */
     private void resize() {
-        this.capacity = capacity * 2;
+        int capacity = this.data.length + 2;
         Object[] newData = new Object[capacity];
         for (int n = 0; n < this.data.length; n++) {
             newData[n] = this.data[n];
@@ -45,7 +44,7 @@ public class Data {
      * @return quantidade de elementos do Array
      */
     public int size() {
-        return this.currentPosition + 1;
+        return this.currentPosition;
     }
 
     /**
@@ -56,8 +55,8 @@ public class Data {
     public void remove(Object object) {
         for (int n = 0; n < this.currentPosition; n++) {
             if (this.data[n].equals(object)) {
+                currentPosition--;
                 rearrange(n);
-                this.currentPosition--;
             }
         }
     }
@@ -88,5 +87,11 @@ public class Data {
             }
         }
         return false;
+    }
+
+    public void imprimir() {
+        for (int i = 0; i < data.length; i++) {
+            System.out.println(data[i]);
+        }
     }
 }

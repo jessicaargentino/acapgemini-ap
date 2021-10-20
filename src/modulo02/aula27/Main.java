@@ -46,15 +46,18 @@ public class Main {
         data.add(student);
 
         /**
-         * Novo objeto de pessoas com mesmos dados/apontando para o mesmo espaço de
-         * memória
+         * Novo objeto de pessoas e atribuição dos mesmos valores
          */
-        People peopleTwo = people;
+        People peopleTwo = new People();
+        peopleTwo.name = "Laura";
+        peopleTwo.lastName = "Palmer";
+        peopleTwo.age = 17;
 
         /** Verificação de peopleTwo no Array */
         System.out.println(data.contains(peopleTwo));
 
         /** Remoção do aluno do Array */
         data.remove(student);
+        System.out.println(data.contains(student));
     }
 }
