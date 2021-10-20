@@ -13,13 +13,14 @@ public class Student extends People {
      */
     @Override
     public boolean equals(Object obj) {
-        Student student = (Student) obj;
-        if (this.registration == student.registration && this.group.equals(student.group)
-                && this.course.equals(student.course)) {
-            return true;
-        } else {
-            return false;
+        if (obj instanceof Student) {
+            Student student = (Student) obj;
+            if (this.registration == student.registration && this.group.equals(student.group)
+                    && this.course.equals(student.course)) {
+                return true;
+            }
         }
+        return false;
     }
 
     @Override

@@ -13,12 +13,13 @@ public class People {
      */
     @Override
     public boolean equals(Object obj) {
-        People people = (People) obj;
-        if (this.name.equals(people.name) && this.lastName.equals(people.lastName) && this.age == people.age) {
-            return true;
-        } else {
-            return false;
+        if (obj instanceof People) {
+            People people = (People) obj;
+            if (this.name.equals(people.name) && this.lastName.equals(people.lastName) && this.age == people.age) {
+                return true;
+            }
         }
+        return false;
     }
 
     @Override
