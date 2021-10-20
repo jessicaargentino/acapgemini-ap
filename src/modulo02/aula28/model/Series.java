@@ -2,6 +2,7 @@ package modulo02.aula28.model;
 
 public class Series {
     public int id;
+    public static int counter = 1;
     public String name;
     public String genre;
     public int releaseYear;
@@ -11,7 +12,7 @@ public class Series {
      * Construtor O id é incrementado a cada instância da classe
      */
     public Series() {
-        this.id++;
+        this.id = counter++;
     }
 
     @Override
@@ -27,7 +28,7 @@ public class Series {
 
     @Override
     public String toString() {
-        return "\nNome: " + this.name + "\nGênero: " + this.genre + "\nAno de lançamento: " + this.releaseYear
-                + "\nTemporadas: " + this.season;
+        return "\nID: " + this.id + "\nNome: " + this.name + "\nGênero: " + this.genre + "\nAno de lançamento: "
+                + this.releaseYear + "\nTemporadas: " + this.season;
     }
 }

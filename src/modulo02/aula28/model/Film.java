@@ -2,17 +2,17 @@ package modulo02.aula28.model;
 
 public class Film {
     public int id;
+    public static int counter = 1;
     public String name;
     public String genre;
     public int releaseYear;
     public String direction;
 
     /**
-     * Construtor 
-     * O id é incrementado a cada instância da classe
+     * Construtor O id é incrementado a cada instância da classe
      */
     public Film() {
-        this.id++;
+        this.id = counter++;
     }
 
     @Override
@@ -28,7 +28,7 @@ public class Film {
 
     @Override
     public String toString() {
-        return "\nNome: " + this.name + "\nGênero: " + this.genre + "\nAno de lançamento: " + this.releaseYear
-                + "\nDireção: " + this.direction;
+        return "\nID: " + this.id + "\nNome: " + this.name + "\nGênero: " + this.genre + "\nAno de lançamento: "
+                + this.releaseYear + "\nDireção: " + this.direction;
     }
 }
