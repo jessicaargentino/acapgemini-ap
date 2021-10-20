@@ -11,7 +11,7 @@ import modulo02.aula28.model.Series;
  * públicos de sua escolha. As controllers devem possuir os quatro métodos de
  * CRUD e deve utilizar um ArrayList privado para manter os dados. (Utilize o
  * conceito de Generics nas Controllers). A view deve testar as operações de
- * CRUD para cada controller (Utilize dados fixo, sem entrada do usuário).
+ * CRUD para cada controller (Utilize dados fixo, sem entrada do usuário)
  */
 public class MainView {
     public static void main(String[] args) {
