@@ -11,19 +11,76 @@ public class MainView {
         FilmController filmController = new FilmController();
         SeriesController seriesController = new SeriesController();
 
-        Film film = new Film();
+        Film filmOne = new Film();
+        Film filmTwo = new Film();
         Series series = new Series();
 
         /** Atribuição de valores */
-        film.name = "Star Wars - The Empire Strikes Back";
-        film.genre = "Ficção científica";
-        film.releaseYear = 1980;
-        film.direction = "Irvin Kershner";
+        filmOne.name = "Star Wars - The Empire Strikes Back";
+        filmOne.genre = "Ficção científica";
+        filmOne.releaseYear = 1980;
+        filmOne.direction = "Irvin Kershner";
 
+        filmTwo.name = "O Fantástico Sr Raposo";
+        filmTwo.genre = "Animação";
+        filmTwo.releaseYear = 2009;
+        filmTwo.direction = "Wes Anderson";
+
+        series.name = "Bates Motel";
+        series.genre = "Drama e suspense";
+        series.releaseYear = 2013;
+        series.season = 5;
+
+        /** Adição dos objetos no ArrayList */
+        filmController.create(filmOne);
+        filmController.create(filmTwo);
+        seriesController.create(series);
+
+        /** Impressão dos objetos nos ArrayList */
+        System.out.println("***** FILMES E SÉRIES INICIAIS *****");
+        for (Film film : filmController.read()) {
+            System.out.println(film);
+        }
+
+        for (Series s : seriesController.read()) {
+            System.out.println(s);
+        }
+
+        /** Atualização de um filme e uma série */
         series.name = "Twin Peaks";
         series.genre = "Suspense surrealista";
         series.releaseYear = 1990;
         series.season = 3;
+        seriesController.update(series);
 
+        filmTwo.name = "O Labirinto do Fauno";
+        filmTwo.genre = "Fantasia";
+        filmTwo.releaseYear = 2006;
+        filmTwo.direction = "Guillermo del Toro";
+        filmController.update(filmTwo);
+
+        /** Reimpressão dos objetos no ArrayList */
+        System.out.println("\n***** FILMES E SÉRIES ATUALIZADOS *****");
+        for (Film film : filmController.read()) {
+            System.out.println(film);
+        }
+
+        for (Series s : seriesController.read()) {
+            System.out.println(s);
+        }
+
+        /** Excluindo um filme e uma série */
+        filmController.delete(filmOne);
+        seriesController.delete(series);
+
+        /** Reimpressão dos objetos no ArrayList */
+        System.out.println("\n***** FILMES E SÉRIES APÓS EXCLUSÃO *****");
+        for (Film film : filmController.read()) {
+            System.out.println(film);
+        }
+
+        for (Series s : seriesController.read()) {
+            System.out.println(s);
+        }
     }
 }
