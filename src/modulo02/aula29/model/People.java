@@ -1,15 +1,9 @@
 package modulo02.aula29.model;
 
-public abstract class People {
-    public int id;
-    public static int counter = 0;
+public abstract class People extends Base {
     public String name;
     public Adress homeAdress;
     public Adress businessAdress;
-
-    public People() {
-        this.id = counter++;
-    }
 
     @Override
     public boolean equals(Object object) {
