@@ -15,5 +15,22 @@ public class MainView {
         LegalPersonController legalController = new LegalPersonController();
         IndividualPerson individualPerson = new IndividualPerson();
         LegalPerson legalPerson = new LegalPerson();
+
+        /** Atribuição de valores */
+        individualPerson.name = "Laura Palmer";
+        individualPerson.cpf = "987.225.467.12";
+        individualPerson.homeAdress.adress = "Rua Bolinho";
+        individualPerson.homeAdress.number = "17";
+        individualPerson.homeAdress.zipCode = "98076-229";
+        individualPerson.homeAdress.city = "Twin Peaks";
+        individualPerson.homeAdress.state = "Washington";
+
+        legalPerson.name = "Dale Cooper";
+        legalPerson.cnpj = "23.098.387/0001-23";
+        legalPerson.businessAdress.adress = "Rua Richard";
+        legalPerson.businessAdress.number = "34";
+        legalPerson.businessAdress.zipCode = "98263-098";
+        legalPerson.businessAdress.city = "Twin Peaks";
+        legalPerson.businessAdress.state = "Washington";
     }
 }
