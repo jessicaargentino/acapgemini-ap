@@ -97,5 +97,19 @@ public class MainView {
         for (LegalPerson l : legalController.read()) {
             System.out.println(l);
         }
+
+        /** Excluindo um filme e uma série */
+        individualController.delete(individualPerson);
+        legalController.delete(legalPerson);
+
+        /** Reimpressão dos objetos no ArrayList */
+        System.out.println("\n***** PESSOAS APÓS A EXCLUSÃO *****");
+        for (IndividualPerson i : individualController.read()) {
+            System.out.println(i);
+        }
+
+        for (LegalPerson l : legalController.read()) {
+            System.out.println(l);
+        }
     }
 }
