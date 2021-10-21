@@ -18,7 +18,6 @@ public abstract class People extends Base {
 
     @Override
     public String toString() {
-        return "\nID: " + this.id + "\nNome: " + this.name + "\nEndereço residencial: " + this.homeAdress
-                + "\nEndereço comercial: " + this.businessAdress;
+        return "\nID: " + this.id + "\nNome: " + this.name;
     }
 }

@@ -5,6 +5,6 @@ public class LegalPerson extends People {
 
     @Override
     public String toString() {
-        return super.toString() + "\nCNPJ: " + this.cnpj;
+        return super.toString() + "\nCNPJ: " + this.cnpj + this.businessAdress.toString();
     }
 }

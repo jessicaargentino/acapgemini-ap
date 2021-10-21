@@ -5,6 +5,6 @@ public class IndividualPerson extends People {
 
     @Override
     public String toString() {
-        return super.toString() + "\nCPF: " + this.cpf;
+        return super.toString() + "\nCPF: " + this.cpf + this.homeAdress.toString();
     }
 }

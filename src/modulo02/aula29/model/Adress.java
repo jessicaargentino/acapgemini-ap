@@ -6,4 +6,10 @@ public class Adress extends Base {
     public String zipCode;
     public String city;
     public String state;
+
+    @Override
+    public String toString() {
+        return String.format("\nEndereço: %s, número %s", this.adress, this.number) + "\nCEP: " + this.zipCode
+                + "\nCidade: " + this.city + "\nEstado: " + this.state;
+    }
 }
