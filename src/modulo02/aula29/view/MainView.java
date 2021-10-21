@@ -42,7 +42,7 @@ public class MainView {
         individualController.create(individualPerson);
         legalController.create(legalPerson);
 
-        /** Impressão dos objetos nos ArrayList */
+        /** Impressão dos objetos no ArrayList */
         System.out.println("***** PESSOAS INICIAIS *****");
         for (IndividualPerson i : individualController.read()) {
             System.out.println(i);
@@ -62,8 +62,34 @@ public class MainView {
         legalPerson.businessAdress.adress = adress.adress;
         legalController.update(legalPerson);
 
-        /** Impressão dos objetos nos ArrayList */
+        /** Impressão dos objetos no ArrayList */
         System.out.println("\n***** PESSOAS COM RUA ALTERADA *****");
+        for (IndividualPerson i : individualController.read()) {
+            System.out.println(i);
+        }
+
+        for (LegalPerson l : legalController.read()) {
+            System.out.println(l);
+        }
+
+        /** Criando uma nova IndividualPerson */
+        IndividualPerson individualPersonTwo = new IndividualPerson();
+        adress = new Adress();
+
+        individualPersonTwo.name = "Audrey Horne";
+        individualPersonTwo.cpf = "826.009.374.00";
+        adress.adress = "Rua Prudence";
+        adress.number = "18";
+        adress.zipCode = "98273-025";
+        adress.city = "Twin Peaks";
+        adress.state = "Washington";
+        individualPersonTwo.homeAdress = adress;
+
+        /** Adição no ArrayList */
+        individualController.create(individualPersonTwo);
+
+        /** Impressão dos objetos no ArrayList */
+        System.out.println("\n***** PESSOAS COM NOVA PESSOA CRIADA *****");
         for (IndividualPerson i : individualController.read()) {
             System.out.println(i);
         }
