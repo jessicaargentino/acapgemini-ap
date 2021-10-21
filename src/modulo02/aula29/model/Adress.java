@@ -9,7 +9,7 @@ public class Adress extends Base {
 
     @Override
     public String toString() {
-        return String.format("\nEndereço: %s, número %s", this.adress, this.number) + "\nCEP: " + this.zipCode
+        return String.format("\nEndereço: %s, nº %s", this.adress, this.number) + "\nCEP: " + this.zipCode
                 + "\nCidade: " + this.city + "\nEstado: " + this.state;
     }
 }
