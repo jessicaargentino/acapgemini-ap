@@ -51,5 +51,25 @@ public class MainView {
         for (LegalPerson l : legalController.read()) {
             System.out.println(l);
         }
+
+        /** Update dos dois objetos alterando o nome da rua */
+        adress.adress = "Rua Bernice";
+        individualPerson.homeAdress.adress = adress.adress;
+        individualController.update(individualPerson);
+
+        adress = new Adress();
+        adress.adress = "Rua Coop";
+        legalPerson.businessAdress.adress = adress.adress;
+        legalController.update(legalPerson);
+
+        /** Impressão dos objetos nos ArrayList */
+        System.out.println("\n***** PESSOAS COM RUA ALTERADA *****");
+        for (IndividualPerson i : individualController.read()) {
+            System.out.println(i);
+        }
+
+        for (LegalPerson l : legalController.read()) {
+            System.out.println(l);
+        }
     }
 }
