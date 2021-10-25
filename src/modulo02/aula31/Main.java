@@ -24,9 +24,9 @@ public class Main {
                 option = menu(input);
                 actions(option, numberOne, numberTwo);
             } catch (NumberFormatException e) {
-                System.out.println("\nCaractere inválido, volte ao menu e tente novamente!\n");
+                System.out.println("\nCaractere inválido, volte ao menu e tente novamente!");
             } catch (ArithmeticException e) {
-                System.out.println("Não é possível realizar divisão por zero, volte ao menu e tente novamente!\n");
+                System.out.println("Não é possível realizar divisão por zero, volte ao menu e tente novamente!");
             }
         } while (returnMenu(input));
     }
@@ -73,21 +73,24 @@ public class Main {
      * @throws ArithmeticException exceção de divisão por zero
      */
     public static void actions(int option, int numberOne, int numberTwo) throws ArithmeticException {
+        int result = 0;
+
         switch (option) {
         case 1:
-            System.out.printf("O resultado da soma é: %d\n\n", Calculator.sum(numberOne, numberTwo));
+            result = Calculator.sum(numberOne, numberTwo);
             break;
         case 2:
-            System.out.printf("O resultado da subtração é: %d\n\n", Calculator.subtraction(numberOne, numberTwo));
+            result = Calculator.subtraction(numberOne, numberTwo);
             break;
         case 3:
-            System.out.printf("O resultado da multiplicação é: %d\n\n",
-                    Calculator.multiplication(numberOne, numberTwo));
+            result = Calculator.multiplication(numberOne, numberTwo);
             break;
         case 4:
-            System.out.printf("O resultado da divisão é: %d\n\n", Calculator.division(numberOne, numberTwo));
+            result = Calculator.division(numberOne, numberTwo);
             break;
         }
+
+        System.out.printf("O resultado da operação é: %d\n", result);
     }
 
     /**
@@ -96,25 +99,28 @@ public class Main {
      * @param input entrada do usuário
      * @return true para retornar ao menu ou false para não retornar ao menu
      */
-    public static boolean returnMenu(Scanner input) {
+    private static boolean returnMenu(Scanner input) {
         int option = 0;
         boolean turnBack = true;
         do {
             try {
-                System.out.println("Deseja voltar ao menu?\n1 - Sim\n2 - Não");
+                System.out.println("\nDeseja voltar ao menu?\n1 - Sim\n2 - Não");
                 System.out.print("\nSua opção: ");
                 option = Integer.parseInt(input.nextLine());
                 System.out.println();
 
                 if (option == 1) {
                     turnBack = true;
-                } else {
+                } else if (option == 2) {
                     System.out.println("Obrigada por utilizar nossa calculadora!\n");
+                    turnBack = false;
+                } else {
+                    System.out.println("Opção inválida, tente novamente!");
                     turnBack = false;
                 }
 
             } catch (NumberFormatException e) {
-                System.out.println("\nCaractere inválido, tente novamente!\n");
+                System.out.println("\nCaractere inválido, tente novamente!");
             }
         } while (option != 1 && option != 2);
         return turnBack;
