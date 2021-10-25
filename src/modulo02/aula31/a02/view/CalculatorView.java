@@ -89,7 +89,7 @@ public class CalculatorView {
     }
 
     /**
-     * Método que recebe a opção do usuário para retornar ao menu ou não
+     * Método que de acordo com a escolha do usuário retorna ao menu inicial
      * 
      * @param input entrada do usuário
      * @return true para retornar ao menu ou false para não retornar ao menu
