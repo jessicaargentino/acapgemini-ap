@@ -9,7 +9,7 @@ public class CalculatorController {
      * @param calculator instância de Calculator para acessar os gets dos números
      * @return resultado da soma dos dois números
      */
-    public static int sum(Calculator calculator) {
+    public int sum(Calculator calculator) {
         return (calculator.getNumberOne() + calculator.getNumberTwo());
     }
 
@@ -19,7 +19,7 @@ public class CalculatorController {
      * @param calculator instância de Calculator para acessar os gets dos números
      * @return resultado da subtração dos dois números
      */
-    public static int subtraction(Calculator calculator) {
+    public int subtraction(Calculator calculator) {
         return (calculator.getNumberOne() - calculator.getNumberTwo());
     }
 
@@ -29,7 +29,7 @@ public class CalculatorController {
      * @param calculator instância de Calculator para acessar os gets dos números
      * @return resultado da multiplicação dos dois números
      */
-    public static int multiplication(Calculator calculator) {
+    public int multiplication(Calculator calculator) {
         return (calculator.getNumberOne() * calculator.getNumberTwo());
     }
 
@@ -39,7 +39,7 @@ public class CalculatorController {
      * @param calculator instância de Calculator para acessar os gets dos números
      * @return resultado da divisão dos dois números
      */
-    public static int division(Calculator calculator) {
+    public int division(Calculator calculator) {
         return (calculator.getNumberOne() / calculator.getNumberTwo());
     }
 }
