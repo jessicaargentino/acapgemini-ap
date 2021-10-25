@@ -2,6 +2,15 @@ package modulo02.aula31;
 
 import java.util.Scanner;
 
+/**
+ * Crie uma calculadora para realizar as quatro operações básicas: soma,
+ * subtração, multiplicação e divisão. Deve possuir um menu para o usuário
+ * escolher a operação a realizar. O sistema deve possuir um tratamento de
+ * exceção para evitar erro em uma divisão por zero. O sistema deve possuir um
+ * tratamento de exceção durante a leitura dos dados para evitar que o usuário
+ * insira algo diferente de números inteiros tanto para as operação quanto para
+ * o menu.
+ */
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
