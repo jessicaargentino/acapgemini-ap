@@ -1,4 +1,4 @@
-package modulo02.aula31;
+package modulo02.aula31.a01;
 
 import java.util.Scanner;
 
