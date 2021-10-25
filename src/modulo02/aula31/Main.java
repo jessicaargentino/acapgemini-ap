@@ -24,11 +24,11 @@ public class Main {
                 option = menu(input);
                 actions(option, numberOne, numberTwo);
             } catch (NumberFormatException e) {
-                System.out.println("\nCaractere inválido, tente novamente!\n");
+                System.out.println("\nCaractere inválido, volte ao menu e tente novamente!\n");
             } catch (ArithmeticException e) {
-                System.out.println("Não é possível realizar divisão por zero, tente novamente!\n");
+                System.out.println("Não é possível realizar divisão por zero, volte ao menu e tente novamente!\n");
             }
-        } while (option != 5);
+        } while (returnMenu(input));
     }
 
     /**
@@ -57,7 +57,6 @@ public class Main {
         System.out.println("2 - Subtração");
         System.out.println("3 - Multiplicação");
         System.out.println("4 - Divisão");
-        System.out.println("5 - Sair");
         System.out.print("\nEscolha uma opção: ");
         int option = Integer.parseInt(input.nextLine());
         System.out.println();
@@ -88,9 +87,36 @@ public class Main {
         case 4:
             System.out.printf("O resultado da divisão é: %d\n\n", Calculator.division(numberOne, numberTwo));
             break;
-        case 5:
-            System.out.println("Obrigada por utilizar nossa calculadora!");
-            break;
         }
+    }
+
+    /**
+     * Método que recebe a opção do usuário para retornar ao menu ou não
+     * 
+     * @param input entrada do usuário
+     * @return true para retornar ao menu ou false para não retornar ao menu
+     */
+    public static boolean returnMenu(Scanner input) {
+        int option = 0;
+        boolean turnBack = true;
+        do {
+            try {
+                System.out.println("Deseja voltar ao menu?\n1 - Sim\n2 - Não");
+                System.out.print("\nSua opção: ");
+                option = Integer.parseInt(input.nextLine());
+                System.out.println();
+
+                if (option == 1) {
+                    turnBack = true;
+                } else {
+                    System.out.println("Obrigada por utilizar nossa calculadora!\n");
+                    turnBack = false;
+                }
+
+            } catch (NumberFormatException e) {
+                System.out.println("\nCaractere inválido, tente novamente!\n");
+            }
+        } while (option != 1 && option != 2);
+        return turnBack;
     }
 }
