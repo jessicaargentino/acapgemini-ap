@@ -21,6 +21,7 @@ public class Category {
         return description;
     }
 
+    /** Sobreescrita toString para impressão */
     @Override
     public String toString() {
         return "\nCategoria: " + this.getCategory() + "\nDescrição categoria: " + this.getDescription();
