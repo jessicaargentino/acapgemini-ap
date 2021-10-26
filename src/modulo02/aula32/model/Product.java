@@ -32,14 +32,6 @@ public class Product extends Base {
         return brand;
     }
 
-    public void setCategory(Category category) {
-        this.category = category;
-    }
-
-    public Category getCategory() {
-        return category;
-    }
-
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
@@ -71,7 +63,7 @@ public class Product extends Base {
     /** Sobreescrita toString para impressão */
     @Override
     public String toString() {
-        return "\nNome: " + this.getName() + "\nMarca: " + this.getBrand() + this.getCategory() + "\nQuantidade: "
+        return "\nNome: " + this.getName() + "\nMarca: " + this.getBrand() + this.category + "\nQuantidade: "
                 + this.getQuantity() + String.format("\nPreço: R$%.2f", this.getPrice());
     }
 }

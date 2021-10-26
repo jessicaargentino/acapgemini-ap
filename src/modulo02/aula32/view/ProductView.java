@@ -108,4 +108,24 @@ public class ProductView {
             System.out.println("ID não encontrado, não foi possível atualizar o produto!");
         }
     }
+
+    /**
+     * Busca produto pelo id e exclui caso exista.
+     * 
+     * @param productController variável de manipulação do ArrayList
+     * @param input             entrada de dados do usuário
+     */
+    public static void delete(ProductController productController, Scanner input) {
+        System.out.print("\nID do produto a ser excluído: ");
+        int id = Integer.parseInt(input.nextLine());
+        int index = productController.indexOf(id);
+
+        if (index >= 0) {
+            Product product = productController.read().get(index);
+            productController.delete(product);
+            System.out.println("\nProduto excluído com sucesso!");
+        } else {
+            System.out.println("ID não encontrado, não foi possível excluir o produto!");
+        }
+    }
 }
