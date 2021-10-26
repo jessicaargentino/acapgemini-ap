@@ -29,4 +29,18 @@ public class BaseController<T> {
     public ArrayList<T> read() {
         return this.data;
     }
+
+    /**
+     * CRUD - Método UPDATE: Através do método contains, verifica se existe um
+     * objeto de mesmo id no objeto recebido por parâmetro no ArrayList. Se sim,
+     * exclui o objeto e adiciona o novo de mesmo id ao ArrayList.
+     *
+     * @param object objeto generico
+     */
+    public void update(T object) {
+        if (this.data.contains(object)) {
+            this.delete(object);
+            this.create(object);
+        }
+    }
 }
