@@ -67,7 +67,7 @@ public class Product extends Base {
     /** Sobreescrita toString para impressão */
     @Override
     public String toString() {
-        return "\nNome: " + this.getName() + "\nMarca: " + this.getBrand() + this.category + "\nQuantidade: "
-                + this.getQuantity() + String.format("\nPreço: R$%.2f", this.getPrice());
+        return "\nID: " + this.getId() + "\nNome: " + this.getName() + "\nMarca: " + this.getBrand() + this.category
+                + "\nQuantidade: " + this.getQuantity() + String.format("\nPreço: R$%.2f", this.getPrice());
     }
 }
