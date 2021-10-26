@@ -20,4 +20,9 @@ public class Category {
     public String getDescription() {
         return description;
     }
+
+    @Override
+    public String toString() {
+        return "\nCategoria: " + this.getCategory() + "\nDescrição categoria: " + this.getDescription();
+    }
 }
