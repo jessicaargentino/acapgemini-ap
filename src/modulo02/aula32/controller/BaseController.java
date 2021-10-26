@@ -20,4 +20,13 @@ public class BaseController<T> {
     public void create(T object) {
         this.data.add(object);
     }
+
+    /**
+     * CRUD - Método READ: Retorna todos os objetos presentes no ArrayList
+     * 
+     * @return objetos contidos no ArrayList
+     */
+    public ArrayList<T> read() {
+        return this.data;
+    }
 }
