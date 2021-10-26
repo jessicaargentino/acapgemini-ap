@@ -9,10 +9,13 @@ import modulo02.aula32.model.Product;
 public class ProductView {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        ProductController productController = new ProductController();
+        
         int option;
         System.out.println("****** CADASTRO DE PRODUTOS ******\n");
         menu();
         option = readNumber("\nEscolha uma opção: ", input);
+        actionMenu(option, productController, input);
     }
 
     /** Método que imprime um menu com as opções do programa */
@@ -21,6 +24,30 @@ public class ProductView {
         System.out.println("2 - Alterar um produto");
         System.out.println("3 - Deletar um produto");
         System.out.println("4 - Listar produtos");
+    }
+
+    public static void actionMenu(int option, ProductController productController, Scanner input) {
+        switch (option) {
+        case 1:
+            create(productController, input);
+            break;
+
+        case 2:
+            update(productController, input);
+            break;
+
+        case 3:
+            delete(productController, input);
+            break;
+
+        case 4:
+            read(productController);
+            break;
+
+        default:
+            System.out.println("Opção inválida, tente novamente!");
+            break;
+        }
     }
 
     /**
@@ -64,19 +91,6 @@ public class ProductView {
         System.out.print("Preço: R$");
         product.setPrice(Double.parseDouble(input.nextLine()));
         productController.create(product);
-    }
-
-    /**
-     * Método que através do foreach percorre o ArrayList e imprime os objetos
-     * existentes no mesmo
-     * 
-     * @param productController variável de manipulação do ArrayList
-     */
-    public static void read(ProductController productController) {
-        ArrayList<Product> product = productController.read();
-        for (Product p : product) {
-            System.out.println(p);
-        }
     }
 
     /**
@@ -126,6 +140,19 @@ public class ProductView {
             System.out.println("\nProduto excluído com sucesso!");
         } else {
             System.out.println("ID não encontrado, não foi possível excluir o produto!");
+        }
+    }
+
+    /**
+     * Método que através do foreach percorre o ArrayList e imprime os objetos
+     * existentes no mesmo
+     * 
+     * @param productController variável de manipulação do ArrayList
+     */
+    public static void read(ProductController productController) {
+        ArrayList<Product> product = productController.read();
+        for (Product p : product) {
+            System.out.println(p);
         }
     }
 }
