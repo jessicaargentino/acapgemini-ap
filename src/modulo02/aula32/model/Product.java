@@ -56,6 +56,19 @@ public class Product extends Base {
         return price;
     }
 
+    /** Sobreescrita equals para verificar objeto pelo id */
+    @Override
+    public boolean equals(Object object) {
+        if (object instanceof Product) {
+            Product product = (Product) object;
+            if (this.getId() == product.getId()) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /** Sobreescrita toString para impressão */
     @Override
     public String toString() {
         return "\nNome: " + this.getName() + "\nMarca: " + this.getBrand() + this.getCategory() + "\nQuantidade: "
