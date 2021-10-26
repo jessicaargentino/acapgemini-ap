@@ -78,4 +78,34 @@ public class ProductView {
             System.out.println(p);
         }
     }
+
+    /**
+     * Método que chama a verificação de id para retornar >= 0 para id existente ou
+     * -1 para id não existente, através disso, realiza a alteração de um objeto se
+     * o id for >= 0, se não, não altera o objeto
+     * 
+     * @param productController variável de manipulação do ArrayList
+     * @param input             entrada de dados do usuário
+     */
+    public static void update(ProductController productController, Scanner input) {
+        System.out.print("\nID do produto a ser alterado: ");
+        int id = Integer.parseInt(input.nextLine());
+        int index = productController.indexOf(id);
+
+        if (index >= 0) {
+            Product product = productController.read().get(index);
+            System.out.print("\nNome: ");
+            product.setName(input.nextLine());
+            System.out.print("Categoria: ");
+            System.out.print("Descrição categoria: ");
+            System.out.print("Quantidade: ");
+            product.setQuantity(Integer.parseInt(input.nextLine()));
+            System.out.print("Preço: R$");
+            product.setPrice(Double.parseDouble(input.nextLine()));
+            productController.update(product);
+            System.out.println("\nProduto atualizado com sucesso!");
+        } else {
+            System.out.println("ID não encontrado, não foi possível atualizar o produto!");
+        }
+    }
 }
