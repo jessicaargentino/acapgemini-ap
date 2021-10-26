@@ -43,4 +43,13 @@ public class BaseController<T> {
             this.create(object);
         }
     }
+
+    /**
+     * CRUD - Método DELETE: Remove um objeto do ArrayList
+     *
+     * @param object objeto generico
+     */
+    public void delete(T object) {
+        this.data.remove(object);
+    }
 }
