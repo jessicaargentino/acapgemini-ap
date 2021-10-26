@@ -1,8 +1,10 @@
 package modulo02.aula32.view;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import modulo02.aula32.controller.ProductController;
+import modulo02.aula32.model.Product;
 
 public class ProductView {
     public static void main(String[] args) {
@@ -42,5 +44,38 @@ public class ProductView {
             }
         } while (!validNumber);
         return number;
+    }
+
+    /**
+     * Método que realiza a criação de um novo objeto da classe Product e através do
+     * productController o adiciona ao ArrayList
+     * 
+     * @param productController variável de manipulação do ArrayList
+     * @param input             entrada de dados do usuário
+     */
+    public static void create(ProductController productController, Scanner input) {
+        Product product = new Product();
+        System.out.print("\nname: ");
+        product.setName(input.nextLine());
+        System.out.print("Categoria: ");
+        System.out.print("Descrição categoria: ");
+        System.out.print("Quantidade: ");
+        product.setQuantity(Integer.parseInt(input.nextLine()));
+        System.out.print("Preço: R$");
+        product.setPrice(Double.parseDouble(input.nextLine()));
+        productController.create(product);
+    }
+
+    /**
+     * Método que através do foreach percorre o ArrayList e imprime os objetos
+     * existentes no mesmo
+     * 
+     * @param productController variável de manipulação do ArrayList
+     */
+    public static void read(ProductController productController) {
+        ArrayList<Product> product = productController.read();
+        for (Product p : product) {
+            System.out.println(p);
+        }
     }
 }
