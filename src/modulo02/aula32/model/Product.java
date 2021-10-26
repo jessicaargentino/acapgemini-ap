@@ -32,6 +32,10 @@ public class Product extends Base {
         return brand;
     }
 
+    public Category getCategory() {
+        return category;
+    }
+
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
