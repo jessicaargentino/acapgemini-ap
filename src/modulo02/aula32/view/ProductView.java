@@ -10,9 +10,9 @@ public class ProductView {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         ProductController productController = new ProductController();
-        
+
         int option;
-        System.out.println("****** CADASTRO DE PRODUTOS ******\n");
+        System.out.println("****** CAPDASTRO ******\n");
         menu();
         option = readNumber("\nEscolha uma opção: ", input);
         actionMenu(option, productController, input);
@@ -29,18 +29,22 @@ public class ProductView {
     public static void actionMenu(int option, ProductController productController, Scanner input) {
         switch (option) {
         case 1:
+            System.out.println("\n****** CADASTRO DE PRODUTOS ******");
             create(productController, input);
             break;
 
         case 2:
+            System.out.println("\n****** ATUALIZAÇÃO DE PRODUTOS ******");
             update(productController, input);
             break;
 
         case 3:
+            System.out.println("\n****** EXCLUSÃO DE PRODUTOS ******");
             delete(productController, input);
             break;
 
         case 4:
+            System.out.println("\n****** LISTA DE PRODUTOS ******");
             read(productController);
             break;
 
@@ -82,15 +86,26 @@ public class ProductView {
      */
     public static void create(ProductController productController, Scanner input) {
         Product product = new Product();
-        System.out.print("\nname: ");
-        product.setName(input.nextLine());
-        System.out.print("Categoria: ");
-        System.out.print("Descrição categoria: ");
-        System.out.print("Quantidade: ");
-        product.setQuantity(Integer.parseInt(input.nextLine()));
-        System.out.print("Preço: R$");
-        product.setPrice(Double.parseDouble(input.nextLine()));
-        productController.create(product);
+        boolean validInput;
+        do {
+            try {
+                System.out.print("\nNome: ");
+                product.setName(input.nextLine());
+                System.out.print("Categoria: ");
+                product.getCategory().setCategory(input.nextLine());
+                System.out.print("Descrição categoria: ");
+                product.getCategory().setDescription(input.nextLine());
+                System.out.print("Quantidade: ");
+                product.setQuantity(Integer.parseInt(input.nextLine()));
+                System.out.print("Preço: R$");
+                product.setPrice(Double.parseDouble(input.nextLine()));
+                productController.create(product);
+                validInput = true;
+            } catch (NumberFormatException e) {
+                System.out.println("Caractere inválido, tente novamente!");
+                validInput = false;
+            }
+        } while (!validInput);
     }
 
     /**
@@ -111,7 +126,9 @@ public class ProductView {
             System.out.print("\nNome: ");
             product.setName(input.nextLine());
             System.out.print("Categoria: ");
+            product.getCategory().setCategory(input.nextLine());
             System.out.print("Descrição categoria: ");
+            product.getCategory().setDescription(input.nextLine());
             System.out.print("Quantidade: ");
             product.setQuantity(Integer.parseInt(input.nextLine()));
             System.out.print("Preço: R$");
