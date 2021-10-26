@@ -57,4 +57,10 @@ public abstract class Product extends Base {
     public double getPrice() {
         return price;
     }
+
+    @Override
+    public String toString() {
+        return "\nNome: " + this.getName() + "\nMarca: " + this.getBrand() + this.getCategory() + "\nQuantidade: "
+                + this.getQuantity() + String.format("\nPreço: R$%.2f", this.getPrice());
+    }
 }
