@@ -1,0 +1,64 @@
+body {
+    background: #e4d4c6;
+}
+
+.header {
+    background: #b4a495;
+    padding: 2px;
+}
+
+h1 {
+    font-size: 30px;
+    font-family: monospace;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+}
+
+h3 {
+    font-size: 18px;
+    font-family: monospace;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+}
+
+table {
+    width: 40%;
+    margin: 50px auto 20px;
+    padding: 20px 50px;
+    text-align: center;
+    background: #ffffff;
+}
+
+thead {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: monospace;
+}
+
+tbody {
+    font-family: monospace;
+    text-align: center;
+}
+
+button {
+    background: #b4a495;
+    border: 1px solid #b4a495;
+    border-radius: 5px;
+    font-size: 13px;
+    font-family: monospace;
+    display: block;
+    margin: 0 auto;
+    height: 35px;
+    width: 35%;
+}
+
+button:hover {
+    background: #97897b;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
