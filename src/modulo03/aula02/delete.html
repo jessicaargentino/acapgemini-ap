@@ -2,7 +2,8 @@
 
 <head>
     <title>Capviagens</title>
-    <link rel="stylesheet" href="css/style_delete.css">
+    <link rel="stylesheet" href="css/delete.css">
+    <script src="js/delete.js"></script>
 </head>
 
 <body>
@@ -11,8 +12,8 @@
         <h3>Ambiente de exclusão de viagens cadastradas</h3>
     </div>
     <form>
-        <label>ID:</label><input type="number" /><br /><br />
-        <input type="submit" value="Excluir" />
+        <label>ID:</label><input type="number" id="id" /><br /><br />
+        <input type="submit" value="Excluir" onclick="remove(event)" />
     </form>
     <button><a href="index.html">Voltar ao menu</a></button>
 </body>
