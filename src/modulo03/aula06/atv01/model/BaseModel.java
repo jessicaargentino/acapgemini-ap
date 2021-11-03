@@ -1,4 +1,4 @@
-package modulo03.aula06.model;
+package modulo03.aula06.atv01.model;
 
 public abstract class BaseModel {
     private static int counter = 1;

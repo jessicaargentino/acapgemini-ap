@@ -1,7 +1,7 @@
-package modulo03.aula06.view;
+package modulo03.aula06.atv01.view;
 
-import modulo03.aula06.controller.RestaurantController;
-import modulo03.aula06.model.Restaurant;
+import modulo03.aula06.atv01.controller.RestaurantController;
+import modulo03.aula06.atv01.model.Restaurant;
 
 /**
  * Crie um sistema java para cadastro de pratos. O projeto deve utilizar MVC.
