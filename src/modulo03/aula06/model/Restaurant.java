@@ -46,6 +46,6 @@ public class Restaurant extends BaseModel {
     @Override
     public String toString() {
         return "ID: " + this.getId() + "\nPrato: " + this.getName() + "\nDescrição: " + this.getDescription()
-                + String.format("Preço: R$%.2f", this.getPrice());
+                + String.format("\nPreço: R$%.2f", this.getPrice()) + "\n";
     }
 }
