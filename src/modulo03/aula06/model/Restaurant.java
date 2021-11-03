@@ -29,4 +29,23 @@ public class Restaurant extends BaseModel {
     public double getPrice() {
         return price;
     }
+
+    /** Sobreescrita equals para verificar objeto pelo id */
+    @Override
+    public boolean equals(Object object) {
+        if (object instanceof Restaurant) {
+            Restaurant restaurant = (Restaurant) object;
+            if (this.getId() == restaurant.getId()) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /** Sobreescrita toString para impressão dos dados */
+    @Override
+    public String toString() {
+        return "ID: " + this.getId() + "\nPrato: " + this.getName() + "\nDescrição: " + this.getDescription()
+                + String.format("Preço: R$%.2f", this.getPrice());
+    }
 }
