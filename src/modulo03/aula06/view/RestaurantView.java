@@ -15,5 +15,13 @@ public class RestaurantView {
         restaurant.setPrice(29.90);
         restaurantController.create(restaurant);
 
+        /** Impressão do objeto */
+        System.out.println("***** CAP CANTEEN *****");
+        for (Restaurant r : restaurantController.read()) {
+            System.out.println(r);
+        }
+
+        
+
     }
 }
