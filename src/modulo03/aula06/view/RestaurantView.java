@@ -15,13 +15,42 @@ public class RestaurantView {
         restaurant.setPrice(29.90);
         restaurantController.create(restaurant);
 
-        /** Impressão do objeto */
+        /** Impressão dos objetos */
         System.out.println("***** CAP CANTEEN *****");
         for (Restaurant r : restaurantController.read()) {
             System.out.println(r);
         }
 
-        
+        /** Criação de um novo objeto, atribuição de valores e adição no ArrayList */
+        Restaurant restaurantTwo = new Restaurant();
+        restaurantTwo.setName("Salada Caesar");
+        restaurantTwo.setDescription("Salada de alface com croutons, azeite e queijo parmesão");
+        restaurantTwo.setPrice(22.99);
+        restaurantController.create(restaurantTwo);
 
+        /** Reimpressão dos objetos */
+        System.out.println("***** CAP CANTEEN *****");
+        for (Restaurant r : restaurantController.read()) {
+            System.out.println(r);
+        }
+
+        /** Alteração do preço do objeto restaurantTwo */
+        restaurantTwo.setPrice(19.99);
+        restaurantController.update(restaurantTwo);
+
+        /** Reimpressão dos objetos */
+        System.out.println("***** CAP CANTEEN *****");
+        for (Restaurant r : restaurantController.read()) {
+            System.out.println(r);
+        }
+
+        /** Exclusão do objeto restaurant */
+        restaurantController.delete(restaurant);
+
+        /** Reimpressão dos objetos */
+        System.out.println("***** CAP CANTEEN *****");
+        for (Restaurant r : restaurantController.read()) {
+            System.out.println(r);
+        }
     }
 }
