@@ -2,7 +2,7 @@ package modulo03.aula06.controller;
 
 import java.util.ArrayList;
 
-public class BaseController<T> {
+public abstract class BaseController<T> {
     private ArrayList<T> data;
 
     /**
