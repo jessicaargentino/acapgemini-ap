@@ -3,6 +3,13 @@ package modulo03.aula06.view;
 import modulo03.aula06.controller.RestaurantController;
 import modulo03.aula06.model.Restaurant;
 
+/**
+ * Crie um sistema java para cadastro de pratos. O projeto deve utilizar MVC.
+ * Utilize uma classe abstrata base model para manter o id. Utilize uma classe
+ * abstrata base repository para realizar as operações de crud. Na View, teste
+ * todos os metodos do Crud com dados fixos, sem a necessidade de menu ou
+ * leitura e escrita pelo terminal.
+ */
 public class RestaurantView {
     public static void main(String[] args) {
         /** Criação de um objeto da classe RestaurantController e Restaurant */
