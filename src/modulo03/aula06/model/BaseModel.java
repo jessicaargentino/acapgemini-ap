@@ -1,6 +1,6 @@
 package modulo03.aula06.model;
 
-public class BaseModel {
+public abstract class BaseModel {
     private static int counter = 1;
     private int id;
 
