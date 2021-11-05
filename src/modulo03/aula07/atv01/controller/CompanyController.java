@@ -44,9 +44,9 @@ public class CompanyController {
                 c.name = companyItems[0];
                 c.cpnj = companyItems[1];
                 c.branch = companyItems[2];
-
                 System.out.printf("\nNome: %s\nCNPJ: %s\nRamo: %s", c.name, c.cpnj, c.branch);
             }
+            input.close();
         } catch (FileNotFoundException e) {
             System.out.println("Não foi possível ler o arquivo, arquivo não encontrado!");
         }

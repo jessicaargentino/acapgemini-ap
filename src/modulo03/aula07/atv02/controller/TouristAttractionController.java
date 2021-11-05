@@ -46,6 +46,7 @@ public class TouristAttractionController implements BaseMethods<TouristAttractio
                 String line = input.nextLine();
                 data.add(new TouristAttraction(line));
             }
+            input.close();
         } catch (FileNotFoundException e) {
             System.out.println("Não foi possível ler o arquivo, arquivo não encontrado!");
         }
