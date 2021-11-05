@@ -18,6 +18,7 @@ public class ReadController {
             while (input.hasNextLine()) {
                 System.out.println(input.nextLine());
             }
+            input.close();
         } catch (FileNotFoundException e) {
             System.out.println("Arquivo não encontrado!");
         }
