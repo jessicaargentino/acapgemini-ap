@@ -25,7 +25,7 @@ public class Create {
             Connection connection = DriverManager.getConnection(connectionString, user, password);
 
             Statement statement = connection.createStatement();
-            String query = "INSERT INTO produto(nome, descricao, preco, id_categoria) values('Protetor Solar Anasol 50FPS', 'Loção para proteção da radiação do sol', 36.90, 3)";
+            String query = "INSERT INTO produto(nome, descricao, preco, id_categoria) VALUES('Protetor Solar Anasol 50FPS', 'Loção para proteção da radiação do sol', 36.90, 3)";
             statement.execute(query, statement.RETURN_GENERATED_KEYS);
             ResultSet id = statement.getGeneratedKeys();
 
