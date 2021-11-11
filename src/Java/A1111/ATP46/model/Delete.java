@@ -1,4 +1,4 @@
-package Java.A1111.model;
+package Java.A1111.ATP46.model;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
