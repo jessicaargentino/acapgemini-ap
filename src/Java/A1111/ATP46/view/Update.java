@@ -8,7 +8,7 @@ import java.sql.Statement;
 public class Update {
     public static void main(String[] args) {
         /**
-         * Criação de uma conexão com banco de dados Postgres e realiza a
+         * Criação de uma conexão com banco de dados Postgres e realização da
          * alteração/update na tabela produto, alterando o ID de todos os produtos para
          * 3
          */
