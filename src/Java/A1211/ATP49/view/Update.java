@@ -1,4 +1,4 @@
-package Java.A1211.ATP49.model;
+package Java.A1211.ATP49.view;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -8,13 +8,12 @@ import java.sql.Statement;
 import Java.A1211.ATP49.utils.ConnectionFactory;
 
 public class Update {
-    /**
-     * Método que utiliza o try-with-resources para chamar realizar uma conexão com
-     * o banco chamando a conexão criada na classe ConnectionFactory e realiza a
-     * alteração/update na tabela categoria, alterando o nome das categorias de id 1
-     * e 3 para móveis.
-     */
-    public void update() {
+    public static void main(String[] args) {
+        /**
+         * Utilização do try-with-resources para realizar conexão com o banco chamando a
+         * conexão criada na classe ConnectionFactory e realização de alteração/update
+         * na tabela categoria, alterando o nome das categorias de id 1 e 3 para móveis.
+         */
         try (Connection connection = new ConnectionFactory().getConnection()) {
             String nome = "Móveis";
             int idOne = 1;
