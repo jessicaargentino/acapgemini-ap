@@ -1,4 +1,4 @@
-package Java.A1111.ATP47.model;
+package Java.A1111.ATP47.view;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -7,11 +7,11 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class Read {
-    /**
-     * Método que cria uma conexão com banco de dados Postgres e realiza a seleção
-     * do id e nome de todos os registros da tabela categoria.
-     */
-    public void read() {
+    public static void main(String[] args) {
+        /**
+         * Criação de uma conexão com banco de dados Postgres e realiza a seleção do id
+         * e nome de todos os registros da tabela categoria.
+         */
         try {
             String driverType = "jdbc";
             String driverName = "postgresql";
