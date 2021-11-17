@@ -9,7 +9,7 @@ import java.sql.Statement;
 public class Update {
     public static void main(String[] args) {
         /**
-         * Criação de uma conexão com banco de dados Postgres e realiza a
+         * Criação de uma conexão com banco de dados Postgres e realização da
          * alteração/update na tabela categoria, alterando o nome das categorias de id 1
          * e 3 para móveis, desta vez utilizando PreparedStatement para prevenir SQL
          * Injection.
