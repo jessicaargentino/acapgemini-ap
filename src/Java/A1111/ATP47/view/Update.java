@@ -1,4 +1,4 @@
-package Java.A1111.ATP47.model;
+package Java.A1111.ATP47.view;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,12 +6,12 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class Update {
-    /**
-     * Método que cria uma conexão com banco de dados Postgres e realiza a
-     * alteração/update na tabela categoria, alterando o nome das categorias de id 1
-     * e 3 para móveis.
-     */
-    public void update() {
+    public static void main(String[] args) {
+        /**
+         * Criação de uma conexão com banco de dados Postgres e realiza a
+         * alteração/update na tabela categoria, alterando o nome das categorias de id 1
+         * e 3 para móveis.
+         */
         try {
             String driverType = "jdbc";
             String driverName = "postgresql";
@@ -28,7 +28,6 @@ public class Update {
             statement.execute(query);
             int linesAffecteds = statement.getUpdateCount();
             System.out.println(linesAffecteds);
-
             connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
