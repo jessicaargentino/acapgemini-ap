@@ -9,7 +9,7 @@ import java.sql.Statement;
 public class Read {
     public static void main(String[] args) {
         /**
-         * Criação de uma conexão com banco de dados Postgres e realiza a seleção de
+         * Criação de uma conexão com banco de dados Postgres e realização da seleção de
          * todos os registros da tabela produto.
          */
         try {
