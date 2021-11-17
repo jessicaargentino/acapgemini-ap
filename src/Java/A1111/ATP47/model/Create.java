@@ -25,7 +25,7 @@ public class Create {
             Connection connection = DriverManager.getConnection(stringConnection, user, password);
             String query = "INSERT INTO categoria(nome, descricao) VALUES('Eletrônicos', 'Dispositivos que utiliza energia elétrica')";
             Statement statement = connection.createStatement();
-            statement.execute(query, statement.RETURN_GENERATED_KEYS);
+            statement.execute(query, Statement.RETURN_GENERATED_KEYS);
             ResultSet id = statement.getGeneratedKeys();
 
             while (id.next()) {
