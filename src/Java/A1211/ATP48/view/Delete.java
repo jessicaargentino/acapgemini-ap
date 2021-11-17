@@ -9,8 +9,8 @@ import java.sql.Statement;
 public class Delete {
     public static void main(String[] args) {
         /**
-         * Criação de uma conexão com banco de dados Postgres e realiza a exclusão dos
-         * últimos registros (id > 3) inseridos na tabela categoria, desta vez
+         * Criação de uma conexão com banco de dados Postgres e realização da exclusão
+         * dos últimos registros (id > 3) inseridos na tabela categoria, desta vez
          * utilizando PreparedStatement para prevenir SQL Injection.
          */
         try {
