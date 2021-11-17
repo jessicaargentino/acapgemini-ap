@@ -1,4 +1,4 @@
-package Java.A1211.ATP49.model;
+package Java.A1211.ATP49.view;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -8,12 +8,12 @@ import java.sql.Statement;
 import Java.A1211.ATP49.utils.ConnectionFactory;
 
 public class Delete {
-    /**
-     * Método que utiliza o try-with-resources para chamar realizar uma conexão com
-     * o banco chamando a conexão criada na classe ConnectionFactory e realiza a
-     * exclusão dos últimos registros (id > 3) inseridos na tabela categoria.
-     */
-    public void delete() {
+    public static void main(String[] args) {
+        /**
+         * Utilização do try-with-resources para realizar conexão com o banco, chamando
+         * a conexão criada na classe ConnectionFactory e realização da exclusão dos
+         * últimos registros (id > 3) inseridos na tabela categoria.
+         */
         try (Connection connection = new ConnectionFactory().getConnection()) {
             int id = 3;
             String query = "DELETE FROM categoria WHERE id > ?";
