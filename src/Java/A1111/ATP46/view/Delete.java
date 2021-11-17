@@ -8,8 +8,8 @@ import java.sql.Statement;
 public class Delete {
     public static void main(String[] args) {
         /**
-         * Criação de uma conexão com banco de dados Postgres e realiza a exclusão do
-         * registro de id 2 na tabela produto.
+         * Criação de uma conexão com banco de dados Postgres e realização de exclusão
+         * do registro de id 2 na tabela produto.
          */
         try {
             String driverType = "jdbc";
