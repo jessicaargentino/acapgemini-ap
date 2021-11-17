@@ -20,9 +20,9 @@ import java.sql.Statement;
 public class Create {
     public static void main(String[] args) {
         /**
-         * Criação de uma conexão com banco de dados Postgres e realiza a inserção de um
-         * novo registro na tabela categoria, desta vez utilizando PreparedStatement
-         * para prevenir SQL Injection.
+         * Criação de uma conexão com banco de dados Postgres e realização da inserção
+         * de um novo registro na tabela categoria, desta vez utilizando
+         * PreparedStatement para prevenir SQL Injection.
          */
         try {
             String driverType = "jdbc";
