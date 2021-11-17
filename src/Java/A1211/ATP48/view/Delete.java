@@ -1,4 +1,4 @@
-package Java.A1211.ATP48.model;
+package Java.A1211.ATP48.view;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -7,11 +7,12 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class Delete {
-    /**
-     * Método que cria uma conexão com banco de dados Postgres e realiza a exclusão
-     * dos últimos registros (id > 3) inseridos na tabela categoria.
-     */
-    public void delete() {
+    public static void main(String[] args) {
+        /**
+         * Criação de uma conexão com banco de dados Postgres e realiza a exclusão dos
+         * últimos registros (id > 3) inseridos na tabela categoria, desta vez
+         * utilizando PreparedStatement para prevenir SQL Injection.
+         */
         try {
             String driverType = "jdbc";
             String driverName = "postgresql";
@@ -32,7 +33,6 @@ public class Delete {
 
             int linesAfeccted = preparedStatement.getUpdateCount();
             System.out.println(linesAfeccted);
-
             connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
