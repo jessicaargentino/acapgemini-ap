@@ -9,8 +9,8 @@ import java.sql.Statement;
 public class Read {
     public static void main(String[] args) {
         /**
-         * Criação de uma conexão com banco de dados Postgres e realiza a seleção do id
-         * e nome de todos os registros da tabela categoria.
+         * Criação de uma conexão com banco de dados Postgres e realização da seleção do
+         * id e nome de todos os registros da tabela categoria.
          */
         try {
             String driverType = "jdbc";
