@@ -1,4 +1,4 @@
-package Java.A1211.ATP49.model;
+package Java.A1211.ATP49.view;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -9,12 +9,12 @@ import java.sql.Statement;
 import Java.A1211.ATP49.utils.ConnectionFactory;
 
 public class Read {
-    /**
-     * Método que utiliza o try-with-resources para chamar realizar uma conexão com
-     * o banco chamando a conexão criada na classe ConnectionFactory e realiza a
-     * seleção do id e nome de todos os registros da tabela categoria.
-     */
-    public void read() {
+    public static void main(String[] args) {
+        /**
+         * Utilização do try-with-resources para realizar conexão com o banco chamando a
+         * conexão criada na classe ConnectionFactory e realização da seleção do id e
+         * nome de todos os registros da tabela categoria.
+         */
         try (Connection connection = new ConnectionFactory().getConnection()) {
             String query = "SELECT id, nome FROM categoria";
             try (PreparedStatement preparedStatement = connection.prepareStatement(query,
